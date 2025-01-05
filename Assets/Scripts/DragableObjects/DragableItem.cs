@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler {
+public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
 
     bool isDragging = false;
     float dragSpeed = 10f;
@@ -62,5 +62,12 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public void OnEndDrag(PointerEventData eventData) {
         isDragging = false;
         Debug.Log("End Drag");
+    }
+    public void OnPointerEnter(PointerEventData eventData) {
+        Debug.Log("Pointer Enter");
+    }
+
+    public void OnPointerExit(PointerEventData eventData) {
+        Debug.Log("Pointer Exit");
     }
 }
