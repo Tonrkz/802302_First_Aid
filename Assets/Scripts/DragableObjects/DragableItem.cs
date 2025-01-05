@@ -1,8 +1,14 @@
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler {
+
+    bool isDragging = false;
+    float dragSpeed = 10f;
+    float lerpSpeed = 0.1f;
+    Rigidbody2D rb;
 
     void Start() {
         GameObject mainCam = GameObject.Find("Main Camera");
@@ -11,6 +17,17 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         }
         if (FindAnyObjectByType<EventSystem>() == null) {
             CreateEventSystems();
+        }
+        if (GetComponent<Rigidbody2D>() == null) {
+            rb = gameObject.AddComponent<Rigidbody2D>();
+            rb.gravityScale = 0;
+            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        }
+    }
+
+    void FixedUpdate() {
+        if (isDragging) {
+            MoveObject();
         }
     }
 
@@ -24,6 +41,11 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         Debug.Log("EventSystem created");
     }
 
+    void MoveObject() {
+        Vector2 mousePos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        rb.MovePosition(Vector2.Lerp(transform.position, Camera.main.ScreenToWorldPoint(mousePos), lerpSpeed));
+    }
+
     public void OnPointerDown(PointerEventData eventData) {
         Debug.Log($"Clicked: {eventData.pointerCurrentRaycast.gameObject.name}");
     }
@@ -33,10 +55,12 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     public void OnDrag(PointerEventData eventData) {
+        isDragging = true;
         Debug.Log("Dragging");
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        isDragging = false;
         Debug.Log("End Drag");
     }
 }
