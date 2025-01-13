@@ -9,4 +9,10 @@ public class ScratchStageStepManager : MonoBehaviour
     {
         instance = this; 
     }
+
+    public void UpdateState()
+    {
+        thisScratchStageStep++;
+        Debug.Log($"Step Update!\n Current Step:{thisScratchStageStep}");
+    }
 }

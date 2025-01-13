@@ -1,5 +1,5 @@
 public enum Enum_StageStep
 {
-    StepOne, StepTwo, StepThree, StepFour, StepFive
+    StepOne, StepTwo, StepThree, StepFour, StepFive, EndStage
 
 }

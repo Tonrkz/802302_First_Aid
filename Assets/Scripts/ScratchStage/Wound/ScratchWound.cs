@@ -16,6 +16,7 @@ public class ScratchWound : MonoBehaviour
             {
                 Debug.Log("Right Item");
                 other.GetComponent<IUseable>().UseItem();
+                ScratchStageStepManager.instance.UpdateState();
             }
             else
             {

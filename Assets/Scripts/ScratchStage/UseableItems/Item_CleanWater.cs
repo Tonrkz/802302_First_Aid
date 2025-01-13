@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Item_Alcohol : MonoBehaviour, IUseable
+public class Item_CleanWater : MonoBehaviour, IUseable
 {
-    public void UseItem()
+   public void UseItem()
     {
         Debug.Log("UseItem");
         Destroy(gameObject);

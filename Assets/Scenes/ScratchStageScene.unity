@@ -562,6 +562,7 @@ GameObject:
   - component: {fileID: 633788680}
   - component: {fileID: 633788679}
   - component: {fileID: 633788681}
+  - component: {fileID: 633788683}
   - component: {fileID: 633788682}
   m_Layer: 0
   m_Name: Item_CleanWater
@@ -699,6 +700,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &633788683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633788678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dcc1e4831f55d84a9e5c04c1e3c2621, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &849631335
 GameObject:
   m_ObjectHideFlags: 0
@@ -750,6 +763,7 @@ GameObject:
   - component: {fileID: 920667758}
   - component: {fileID: 920667760}
   - component: {fileID: 920667761}
+  - component: {fileID: 920667762}
   m_Layer: 0
   m_Name: Item_Cloth
   m_TagString: Untagged
@@ -886,6 +900,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &920667762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920667757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 817e1856e2cffe34594bc735ca2f7522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &937997040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1307,7 @@ GameObject:
   - component: {fileID: 1585854846}
   - component: {fileID: 1585854848}
   - component: {fileID: 1585854849}
+  - component: {fileID: 1585854850}
   m_Layer: 0
   m_Name: Item_Betadine
   m_TagString: Untagged
@@ -1417,6 +1444,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1585854850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1585854845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9480c338d7961864cb227ba6eeffd0c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1602649411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,6 +1559,7 @@ GameObject:
   - component: {fileID: 1715711758}
   - component: {fileID: 1715711757}
   - component: {fileID: 1715711759}
+  - component: {fileID: 1715711761}
   - component: {fileID: 1715711760}
   m_Layer: 0
   m_Name: Item_Soap
@@ -1657,6 +1697,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1715711761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715711756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a7ffaf0c0e55142a566ea48f24fa30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1751763328
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,8 +1806,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1927206286}
   - component: {fileID: 1927206285}
-  - component: {fileID: 1927206287}
   - component: {fileID: 1927206288}
+  - component: {fileID: 1927206287}
+  - component: {fileID: 1927206289}
   m_Layer: 0
   m_Name: Item_Alcohol
   m_TagString: Untagged
@@ -1892,6 +1945,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1927206289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927206284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 960fcc8d7108fd44a9c80b8243f5dc90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

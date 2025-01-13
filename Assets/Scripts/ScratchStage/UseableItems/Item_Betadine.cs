@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Item_Alcohol : MonoBehaviour, IUseable
+public class Item_Betadine : MonoBehaviour, IUseable
 {
     public void UseItem()
     {
