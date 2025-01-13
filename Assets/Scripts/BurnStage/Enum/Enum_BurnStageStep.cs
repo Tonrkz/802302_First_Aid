@@ -1,5 +1,6 @@
 public enum Enum_BurnStageStep {
     StepOne,
     StepTwo,
-    StepThree
+    StepThree,
+    EndStage
 }
