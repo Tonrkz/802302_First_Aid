@@ -21,9 +21,9 @@ public class BurnWound : MonoBehaviour {
                 ScoreManager.instance.SubtractScore();
             }
         }
+    }
 
-        Enum_BurnStageStep GetStageStep() {
-            return BurnStageStepManager.instance.currentStep;
-        }
+    Enum_BurnStageStep GetStageStep() {
+        return BurnStageStepManager.instance.currentStep;
     }
 }

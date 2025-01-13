@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -10,7 +11,6 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     [Header("Attributes")]
     public bool isDragging = false;
     Vector2 originPosition;
-    float dragSpeed = 10f;
     float lerpSpeed = 0.1f;
 
     void Awake() {
@@ -40,6 +40,14 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     void ResetPosition() {
         transform.position = Vector2.Lerp(transform.position, originPosition, lerpSpeed);
+        if (Vector2.Distance(transform.position, originPosition) < 0.1f) {
+            GetComponent<Collider2D>().enabled = true;
+        }
+    }
+
+    IEnumerator ResetPositionCoroutine() {
+        yield return new WaitForFixedUpdate();
+        GetComponent<Collider2D>().enabled = false;
     }
 
     void AddPhysics2DRaycaster(GameObject cam) {
@@ -72,6 +80,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnEndDrag(PointerEventData eventData) {
         isDragging = false;
+        StartCoroutine(ResetPositionCoroutine());
         Debug.Log("End Drag");
     }
     public void OnPointerEnter(PointerEventData eventData) {
