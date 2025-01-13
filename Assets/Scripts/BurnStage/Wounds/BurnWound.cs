@@ -13,10 +13,12 @@ public class BurnWound : MonoBehaviour {
             if (other.gameObject == itemForEachStep[(Byte)GetStageStep()]) {
                 Debug.Log("Right Item");
                 other.GetComponent<IUseable>().UseItem();
+                ScoreManager.instance.AddScore();
                 BurnStageStepManager.instance.UpdateStep();
             }
             else {
                 Debug.Log("Wrong Item");
+                ScoreManager.instance.SubtractScore();
             }
         }
 
