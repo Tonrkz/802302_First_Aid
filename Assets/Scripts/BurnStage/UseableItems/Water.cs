@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Water : MonoBehaviour, IUseable {
     public void UseItem() {
-        throw new System.NotImplementedException();
+        Debug.Log("Water Used");
+        Destroy(gameObject);
     }
 }
