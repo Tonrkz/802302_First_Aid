@@ -4,6 +4,6 @@ public class Item_Soap : MonoBehaviour, IUseable
 {
     public void UseItem()
     {
-        throw new System.NotImplementedException();
+        Debug.Log("UseItem");
     }
 }
