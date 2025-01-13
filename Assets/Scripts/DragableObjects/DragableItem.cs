@@ -4,13 +4,16 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
-
-    bool isDragging = false;
-    float dragSpeed = 10f;
-    float lerpSpeed = 0.1f;
+    [Header("References")]
     Rigidbody2D rb;
 
-    void Start() {
+    [Header("Attributes")]
+    public bool isDragging = false;
+    Vector2 originPosition;
+    float dragSpeed = 10f;
+    float lerpSpeed = 0.1f;
+
+    void Awake() {
         GameObject mainCam = GameObject.Find("Main Camera");
         if (mainCam.GetComponent<Physics2DRaycaster>() == null) {
             AddPhysics2DRaycaster(mainCam);
@@ -23,12 +26,20 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
             rb.gravityScale = 0;
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
+        originPosition = transform.position;
     }
 
     void FixedUpdate() {
         if (isDragging) {
             MoveObject();
         }
+        else {
+            ResetPosition();
+        }
+    }
+
+    void ResetPosition() {
+        transform.position = Vector2.Lerp(transform.position, originPosition, lerpSpeed);
     }
 
     void AddPhysics2DRaycaster(GameObject cam) {
