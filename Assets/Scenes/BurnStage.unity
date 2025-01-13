@@ -2161,6 +2161,7 @@ GameObject:
   - component: {fileID: 1651602879}
   - component: {fileID: 1651602878}
   - component: {fileID: 1651602880}
+  - component: {fileID: 1651602881}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -2207,6 +2208,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982347d3939633c469398a5341071eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1651602881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651602877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba170473ac392e445bb0f7cf30aaf8e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 1188191242}
+  updateScoreText: {fileID: 1086111768}
 --- !u!1 &1713447874
 GameObject:
   m_ObjectHideFlags: 0
@@ -2317,7 +2332,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754413564

@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
+    public static ScoreManager instance;
 
     [Header("Attributes")]
     int scorePerStep = 5;
@@ -11,6 +12,10 @@ public class ScoreManager : MonoBehaviour {
     int score = 10;
     int combo = 0;
     Byte step = 0;
+
+    void Awake() {
+        instance = this;
+    }
 
     public void AddScore() {
         score += scorePerStep + combo * comboMultiplier;
