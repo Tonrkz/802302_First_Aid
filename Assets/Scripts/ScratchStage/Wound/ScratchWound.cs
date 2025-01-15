@@ -25,7 +25,7 @@ public class ScratchWound : MonoBehaviour
 
         }
     }
-    Enum_StageStep GetStageStep()
+    Enum_ScratchStageStep GetStageStep()
     {
         return ScratchStageStepManager.instance.thisScratchStageStep;
     }
