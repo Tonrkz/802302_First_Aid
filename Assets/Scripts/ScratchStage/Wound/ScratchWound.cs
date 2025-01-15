@@ -16,11 +16,13 @@ public class ScratchWound : MonoBehaviour
             {
                 Debug.Log("Right Item");
                 other.GetComponent<IUseable>().UseItem();
+                ScoreManager.instance.AddScore();
                 ScratchStageStepManager.instance.UpdateState();
             }
             else
             {
                 Debug.Log("Wrong Item");
+                ScoreManager.instance.SubtractScore();
             }
 
         }
