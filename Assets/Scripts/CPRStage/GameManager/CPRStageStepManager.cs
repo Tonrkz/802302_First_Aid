@@ -55,6 +55,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 foreach (GameObject item in itemList) {
                     item.SetActive(false);
                 }
+                CPRMinigameManager.instance.InitiateCPRMinigame();
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
@@ -88,6 +89,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StepThree:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} CPR.");
+                CPRMinigameManager.instance.EndCPRMinigame();
                 break;
             case Enum_CPRStageStep.StepFour:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Help breathing.");

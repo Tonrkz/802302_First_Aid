@@ -1,9 +1,49 @@
+using System;
 using UnityEngine;
 
 public class CPRMinigameManager : MonoBehaviour {
     public static CPRMinigameManager instance;
 
+    [SerializeField] GameObject CPRUserInterface;
+    [SerializeField] GameObject beatPrefab;
+    Byte beatCount = 30;
+    Byte beatCounter = 0;
+    Byte beatMissed = 0;
+    float tempo = 120;
+    float timeTreashold = 0;
+    float beatTimer = 0;
+    bool hasStarted = false;
+
     void Awake() {
         instance = this;
+        timeTreashold = 60 / tempo;
+    }
+
+    void Start() {
+        CPRUserInterface.SetActive(false);
+    }
+
+    void Update() {
+        if (beatCounter < beatCount && hasStarted) {
+            beatTimer += Time.deltaTime;
+            if (beatTimer >= timeTreashold) {
+                beatTimer -= timeTreashold;
+                SpawnBeat();
+            }
+        }
+    }
+
+    void SpawnBeat() {
+        GameObject beat = Instantiate(beatPrefab, CPRUserInterface.transform.Find("CPR Minigame Panel").transform, false);
+        beatCounter++;
+    }
+
+    internal void InitiateCPRMinigame() {
+        CPRUserInterface.SetActive(true);
+        hasStarted = true;
+    }
+
+    internal void EndCPRMinigame() {
+        CPRUserInterface.SetActive(false);
     }
 }
