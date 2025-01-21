@@ -10,12 +10,18 @@ public class CPRStageStepManager : MonoBehaviour {
     [SerializeField] GameObject wrongCPRHitbox;
     [SerializeField] GameObject itemUsingHitbox;
 
-    private void Awake() {
+    void Awake() {
         instance = this;
     }
 
-    private void Start() {
+    void Start() {
         OnInitiateStep(currentStep);
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            OnStepCompleted();
+        }
     }
 
     void OnInitiateStep(Enum_CPRStageStep step) {
@@ -25,7 +31,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(false);
                 wrongCPRHitbox.SetActive(false);
-                itemUsingHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(true);
                 break;
             case Enum_CPRStageStep.StepTwo:
                 Debug.Log("Call for ambulance");
@@ -39,21 +45,17 @@ public class CPRStageStepManager : MonoBehaviour {
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
                 wrongCPRHitbox.SetActive(true);
-                itemUsingHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(true);
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(false);
                 wrongCPRHitbox.SetActive(false);
-                itemUsingHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(true);
                 break;
             case Enum_CPRStageStep.End:
                 Debug.Log("End");
-                noseHitbox.SetActive(false);
-                correctCPRHitbox.SetActive(false);
-                wrongCPRHitbox.SetActive(false);
-                itemUsingHitbox.SetActive(false);
                 break;
             default:
                 Debug.Log("Invalid Step");
@@ -61,7 +63,26 @@ public class CPRStageStepManager : MonoBehaviour {
         }
     }
 
-    void OnStepCompleted() {
+    internal void OnStepCompleted() {
+        ScoreManager.instance.AddScore();
+        switch (currentStep) {
+            case Enum_CPRStageStep.StepOne:
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Check for breath.");
+                break;
+            case Enum_CPRStageStep.StepTwo:
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Call for ambulance.");
+                break;
+            case Enum_CPRStageStep.StepThree:
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} CPR.");
+                break;
+            case Enum_CPRStageStep.StepFour:
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Help breathing.");
+                break;
+            case Enum_CPRStageStep.End:
+                break;
+            default:
+                break;
+        }
         ++currentStep;
         Debug.Log($"Step Updated!\nCurrent Step: {currentStep}");
         OnInitiateStep(currentStep);
