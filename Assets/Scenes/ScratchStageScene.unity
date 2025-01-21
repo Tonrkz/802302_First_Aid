@@ -1950,7 +1950,7 @@ GameObject:
   - component: {fileID: 820142868}
   - component: {fileID: 820142867}
   m_Layer: 0
-  m_Name: Paused_Text
+  m_Name: Text_Paused
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3478,7 +3478,7 @@ GameObject:
   - component: {fileID: 1556501316}
   - component: {fileID: 1556501315}
   m_Layer: 0
-  m_Name: ShowStageLevel
+  m_Name: Text_ShowLV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
