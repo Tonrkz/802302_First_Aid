@@ -22,18 +22,38 @@ public class CPRStageStepManager : MonoBehaviour {
         switch (step) {
             case Enum_CPRStageStep.StepOne:
                 Debug.Log("Check for breathing");
+                noseHitbox.SetActive(true);
+                correctCPRHitbox.SetActive(false);
+                wrongCPRHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(false);
                 break;
             case Enum_CPRStageStep.StepTwo:
                 Debug.Log("Call for ambulance");
+                noseHitbox.SetActive(false);
+                correctCPRHitbox.SetActive(false);
+                wrongCPRHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(true);
                 break;
             case Enum_CPRStageStep.StepThree:
                 Debug.Log("Start CPR");
+                noseHitbox.SetActive(false);
+                correctCPRHitbox.SetActive(true);
+                wrongCPRHitbox.SetActive(true);
+                itemUsingHitbox.SetActive(false);
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
+                noseHitbox.SetActive(true);
+                correctCPRHitbox.SetActive(false);
+                wrongCPRHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(false);
                 break;
             case Enum_CPRStageStep.End:
                 Debug.Log("End");
+                noseHitbox.SetActive(false);
+                correctCPRHitbox.SetActive(false);
+                wrongCPRHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(false);
                 break;
             default:
                 Debug.Log("Invalid Step");
