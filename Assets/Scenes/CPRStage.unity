@@ -1148,6 +1148,7 @@ GameObject:
   - component: {fileID: 961116850}
   - component: {fileID: 961116847}
   - component: {fileID: 961116846}
+  - component: {fileID: 961116851}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1214,6 +1215,18 @@ MonoBehaviour:
   correctCPRHitbox: {fileID: 574869161}
   wrongCPRHitbox: {fileID: 1781581454}
   itemUsingHitbox: {fileID: 80916995}
+--- !u!114 &961116851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961116845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5ce45214b8663a45bbcb31de8a816e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &998951817
 GameObject:
   m_ObjectHideFlags: 0
