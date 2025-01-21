@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
@@ -9,6 +11,7 @@ public class CPRStageStepManager : MonoBehaviour {
     [SerializeField] GameObject correctCPRHitbox;
     [SerializeField] GameObject wrongCPRHitbox;
     [SerializeField] GameObject itemUsingHitbox;
+    [SerializeField] List<GameObject> itemList = new List<GameObject>();
 
     void Awake() {
         instance = this;
@@ -32,6 +35,9 @@ public class CPRStageStepManager : MonoBehaviour {
                 correctCPRHitbox.SetActive(false);
                 wrongCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
+                foreach (GameObject item in itemList) {
+                    item.SetActive(true);
+                }
                 break;
             case Enum_CPRStageStep.StepTwo:
                 Debug.Log("Call for ambulance");
@@ -46,6 +52,9 @@ public class CPRStageStepManager : MonoBehaviour {
                 correctCPRHitbox.SetActive(true);
                 wrongCPRHitbox.SetActive(true);
                 itemUsingHitbox.SetActive(true);
+                foreach (GameObject item in itemList) {
+                    item.SetActive(false);
+                }
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
@@ -53,6 +62,9 @@ public class CPRStageStepManager : MonoBehaviour {
                 correctCPRHitbox.SetActive(false);
                 wrongCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
+                foreach (GameObject item in itemList) {
+                    item.SetActive(true);
+                }
                 break;
             case Enum_CPRStageStep.End:
                 Debug.Log("End");
@@ -64,7 +76,9 @@ public class CPRStageStepManager : MonoBehaviour {
     }
 
     internal void OnStepCompleted() {
-        ScoreManager.instance.AddScore();
+        if (currentStep != Enum_CPRStageStep.StepThree) {
+            ScoreManager.instance.AddScore();
+        }
         switch (currentStep) {
             case Enum_CPRStageStep.StepOne:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Check for breath.");

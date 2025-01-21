@@ -1215,6 +1215,9 @@ MonoBehaviour:
   correctCPRHitbox: {fileID: 574869161}
   wrongCPRHitbox: {fileID: 1781581454}
   itemUsingHitbox: {fileID: 80916995}
+  itemList:
+  - {fileID: 998951817}
+  - {fileID: 581235804}
 --- !u!114 &961116851
 MonoBehaviour:
   m_ObjectHideFlags: 0
