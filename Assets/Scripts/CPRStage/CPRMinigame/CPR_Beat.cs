@@ -12,14 +12,18 @@ public class CPR_Beat : MonoBehaviour {
     }
 
     internal void OnPerfectTrigger() {
+        Debug.Log("Perfect");
         Destroy(gameObject);
     }
 
     internal void OnGoodTrigger() {
+        Debug.Log("Good");
         Destroy(gameObject);
     }
 
     internal void OnMissedTrigger() {
+        Debug.Log("Missed");
+        CPRMinigameManager.instance.MissedBeat();
         Destroy(gameObject);
     }
 }

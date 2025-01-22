@@ -33,8 +33,15 @@ public class CPRMinigameManager : MonoBehaviour {
         }
     }
 
+    internal void MissedBeat() {
+        beatMissed++;
+        if (beatMissed >= 7) {
+            EndCPRMinigame(); //Game Over
+        }
+    }
+
     void SpawnBeat() {
-        GameObject beat = Instantiate(beatPrefab, CPRUserInterface.transform.Find("CPR Minigame Panel").transform, false);
+        GameObject beat = Instantiate(beatPrefab, CPRUserInterface.transform, false);
         beatCounter++;
     }
 
@@ -45,5 +52,6 @@ public class CPRMinigameManager : MonoBehaviour {
 
     internal void EndCPRMinigame() {
         CPRUserInterface.SetActive(false);
+        hasStarted = false;
     }
 }
