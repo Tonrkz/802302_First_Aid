@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System;
 using UnityEngine;
 
@@ -12,7 +11,6 @@ public class ScoreManager : MonoBehaviour {
     public int score = 10;
     public int deltaScore = 0;
     int combo = 0;
-    Byte step = 0;
 
     void Awake() {
         instance = this;
@@ -21,6 +19,30 @@ public class ScoreManager : MonoBehaviour {
     void Start() {
         string fourDigitScore = score.ToString("D4");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
+    }
+
+    public void PerfectBeat() {
+        deltaScore = 3;
+        score += deltaScore;
+        string fourDigitScore = score.ToString("D4");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} Perfect!");
+    }
+
+    public void GoodBeat() {
+        deltaScore = 2;
+        score += deltaScore;
+        string fourDigitScore = score.ToString("D4");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} Good!");
+    }
+
+    public void MissedBeat() {
+        deltaScore = -2;
+        score += deltaScore;
+        string fourDigitScore = score.ToString("D4");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"{deltaScore} Missed!");
     }
 
     public void AddScore() {
