@@ -9,7 +9,6 @@ public class CPRStageStepManager : MonoBehaviour {
     [Header("Attributes")]
     [SerializeField] GameObject noseHitbox;
     [SerializeField] GameObject correctCPRHitbox;
-    [SerializeField] GameObject wrongCPRHitbox;
     [SerializeField] GameObject itemUsingHitbox;
     [SerializeField] List<GameObject> itemList = new List<GameObject>();
 
@@ -21,19 +20,12 @@ public class CPRStageStepManager : MonoBehaviour {
         OnInitiateStep(currentStep);
     }
 
-    void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            OnStepCompleted();
-        }
-    }
-
     void OnInitiateStep(Enum_CPRStageStep step) {
         switch (step) {
             case Enum_CPRStageStep.StepOne:
                 Debug.Log("Check for breathing");
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(false);
-                wrongCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
                 foreach (GameObject item in itemList) {
                     item.SetActive(true);
@@ -43,14 +35,12 @@ public class CPRStageStepManager : MonoBehaviour {
                 Debug.Log("Call for ambulance");
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(false);
-                wrongCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
                 break;
             case Enum_CPRStageStep.StepThree:
                 Debug.Log("Start CPR");
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
-                wrongCPRHitbox.SetActive(true);
                 itemUsingHitbox.SetActive(true);
                 foreach (GameObject item in itemList) {
                     item.SetActive(false);
@@ -61,7 +51,6 @@ public class CPRStageStepManager : MonoBehaviour {
                 Debug.Log("Help Breathing");
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(false);
-                wrongCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
                 foreach (GameObject item in itemList) {
                     item.SetActive(true);
@@ -88,7 +77,6 @@ public class CPRStageStepManager : MonoBehaviour {
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Call for ambulance.");
                 break;
             case Enum_CPRStageStep.StepThree:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} CPR.");
                 CPRMinigameManager.instance.EndCPRMinigame();
                 break;
             case Enum_CPRStageStep.StepFour:

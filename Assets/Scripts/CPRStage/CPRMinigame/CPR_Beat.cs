@@ -14,12 +14,14 @@ public class CPR_Beat : MonoBehaviour {
     internal void OnPerfectTrigger() {
         Debug.Log("Perfect");
         ScoreManager.instance.PerfectBeat();
+        CPRMinigameManager.instance.beatTriggered++;
         Destroy(gameObject);
     }
 
     internal void OnGoodTrigger() {
         Debug.Log("Good");
         ScoreManager.instance.GoodBeat();
+        CPRMinigameManager.instance.beatTriggered++;
         Destroy(gameObject);
     }
 

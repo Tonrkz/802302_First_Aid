@@ -9,6 +9,7 @@ public class CPRMinigameManager : MonoBehaviour {
     Byte beatCount = 30;
     Byte beatCounter = 0;
     Byte beatMissed = 0;
+    internal Byte beatTriggered = 0;
     float tempo = 120;
     float timeTreashold = 0;
     float beatTimer = 0;
@@ -30,6 +31,8 @@ public class CPRMinigameManager : MonoBehaviour {
                 beatTimer -= timeTreashold;
                 SpawnBeat();
             }
+        } else if (beatMissed + beatTriggered == beatCount && hasStarted) {
+            CPRStageStepManager.instance.OnStepCompleted();
         }
     }
 
@@ -42,6 +45,7 @@ public class CPRMinigameManager : MonoBehaviour {
 
     void SpawnBeat() {
         GameObject beat = Instantiate(beatPrefab, CPRUserInterface.transform, false);
+        Debug.Log("Beat Spawned");
         beatCounter++;
     }
 
