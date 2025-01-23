@@ -58,5 +58,6 @@ public class ScoreManager : MonoBehaviour {
         combo = 0;
         string fourDigitScore = score.ToString("D4");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, "-3 Wrong");
     }
 }
