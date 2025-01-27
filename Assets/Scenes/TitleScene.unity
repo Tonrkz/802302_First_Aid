@@ -202,16 +202,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: GoToBurnStage
-        m_Mode: 1
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: LoadSceneViaName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: BurnStage
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &91771248
@@ -282,7 +282,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -310,7 +310,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
           m_Arguments:
@@ -413,7 +413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &264853368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1068,7 +1068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &796902468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,7 +1289,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1401022194}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -1301,7 +1301,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1401022194}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -1368,7 +1368,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -1384,7 +1384,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
           m_Arguments:
@@ -1785,16 +1785,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: GoToScratchStageScene
-        m_Mode: 1
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: LoadSceneViaName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: ScratchStageScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1393121315
@@ -1865,7 +1865,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -1893,7 +1893,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
           m_Arguments:
@@ -2018,9 +2018,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1401022189}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec03b27423d153541946ef2f0f87792f, type: 3}
+  m_Script: {fileID: 11500000, guid: ba170473ac392e445bb0f7cf30aaf8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scoreText: {fileID: 0}
+  updateScoreText: {fileID: 0}
 --- !u!1 &1413799592
 GameObject:
   m_ObjectHideFlags: 0
@@ -2104,16 +2106,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: SceneManager, Assembly-CSharp
-        m_MethodName: GoToCPRStage
-        m_Mode: 1
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: LoadSceneViaName
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: CPRStage
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1413799595
@@ -2184,7 +2186,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -2212,7 +2214,7 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
           m_Arguments:
@@ -2443,7 +2445,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1401022194}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -2455,7 +2457,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1401022194}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -2522,7 +2524,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -2538,7 +2540,7 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 1401022194}
-          m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
           m_Arguments:

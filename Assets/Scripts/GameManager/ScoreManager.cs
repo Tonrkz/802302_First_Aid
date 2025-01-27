@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
@@ -17,47 +17,47 @@ public class ScoreManager : MonoBehaviour {
     }
 
     void Start() {
-        string fourDigitScore = score.ToString("D4");
+        string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
     }
 
     public void PerfectBeat() {
         deltaScore = 3;
         score += deltaScore;
-        string fourDigitScore = score.ToString("D4");
+        string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} Perfect!");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} ดีเยี่ยม!");
     }
 
     public void GoodBeat() {
         deltaScore = 2;
         score += deltaScore;
-        string fourDigitScore = score.ToString("D4");
+        string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} Good!");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} เยี่ยม!");
     }
 
     public void MissedBeat() {
         deltaScore = -2;
         score += deltaScore;
-        string fourDigitScore = score.ToString("D4");
+        string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"{deltaScore} Missed!");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"{deltaScore} พลาด!");
     }
 
     public void AddScore() {
         deltaScore = scorePerStep + combo * comboMultiplier;
         score += deltaScore;
         combo++;
-        string fourDigitScore = score.ToString("D4");
+        string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
     }
 
     public void SubtractScore() {
         score -= minusScorePerStep;
         combo = 0;
-        string fourDigitScore = score.ToString("D4");
+        string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, "-3 Wrong");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, "-3 ผิด");
     }
 }
