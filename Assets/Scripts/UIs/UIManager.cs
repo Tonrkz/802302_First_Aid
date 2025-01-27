@@ -1,16 +1,10 @@
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
     public static UIManager instance;
-
-    [SerializeField] string titleScene = "TitleScene";
-    [SerializeField] string levelSelectScene = "LevelSelectScene";
-    [SerializeField] string scratchStageScene = "ScratchStageScene";
-    [SerializeField] string burnStageScene = "BurnStage";
-    [SerializeField] string cprStageScene = "CPRStage";
-
 
     void Awake() {
         if (instance == null) {
@@ -19,6 +13,14 @@ public class UIManager : MonoBehaviour {
         else {
             Destroy(this);
         }
+    }
+
+    public void ScaleUpUI(GameObject ui) {
+        ui.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
+    }
+
+    public void ScaleDownUI(GameObject ui) {
+        ui.transform.localScale = new Vector3(1f, 1f, 1f);
     }
 
     public void ToggleUI(GameObject ui) {

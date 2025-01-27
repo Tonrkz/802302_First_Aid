@@ -172,7 +172,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -181,7 +181,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -209,7 +209,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -1263,7 +1263,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -1272,7 +1272,53 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      IMG_1992_0: 8915323856778734432
+      IMG_1992_1: -2447317453711131608
+      IMG_1992_10: -5834778551115230955
+      IMG_1992_11: -9157523678033304008
+      IMG_1992_12: 2074391761251455673
+      IMG_1992_13: 2596251451218329903
+      IMG_1992_14: 3183356047468547436
+      IMG_1992_15: -7682730554068943092
+      IMG_1992_16: -7449114575473503209
+      IMG_1992_17: -2244522824775104499
+      IMG_1992_18: -1084939391714006760
+      IMG_1992_19: 5825098312639633560
+      IMG_1992_2: -1767967875276578227
+      IMG_1992_20: -4129706718218575718
+      IMG_1992_21: 2804119937354872928
+      IMG_1992_22: 4168927307555631465
+      IMG_1992_23: -7487658391821779672
+      IMG_1992_24: 9200686268131558926
+      IMG_1992_25: 3549558727648417720
+      IMG_1992_26: 986411866060919494
+      IMG_1992_27: 4033950382995277501
+      IMG_1992_28: 323275844937688438
+      IMG_1992_29: 3502123988505100552
+      IMG_1992_3: -1894307309357861976
+      IMG_1992_30: -493334715352690155
+      IMG_1992_31: 7064312630043245163
+      IMG_1992_32: 5257234520518915506
+      IMG_1992_33: 7984675038751270069
+      IMG_1992_34: 7901812786667609555
+      IMG_1992_35: 1053351232201309087
+      IMG_1992_36: -3674462626129741593
+      IMG_1992_37: 7473788318305305503
+      IMG_1992_38: -1688533740875879185
+      IMG_1992_39: 7555191979071513747
+      IMG_1992_4: 9047906341330375229
+      IMG_1992_40: 6314415282613917061
+      IMG_1992_41: -6413711662157343349
+      IMG_1992_42: -2485974559306018327
+      IMG_1992_43: -4744455059922286857
+      IMG_1992_44: -4863604386053032479
+      IMG_1992_45: -8993067079334194977
+      IMG_1992_5: -780122195930409862
+      IMG_1992_6: -8940664440327194131
+      IMG_1992_7: -1984365001095778533
+      IMG_1992_8: -8349813031620818398
+      IMG_1992_9: -2436669191306377496
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
