@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CPR_ItemUsingHitboxScript : MonoBehaviour {
     [SerializeField] GameObject phone;
@@ -15,7 +15,7 @@ public class CPR_ItemUsingHitboxScript : MonoBehaviour {
             case Enum_CPRStageStep.StepTwo: // Call for ambulance
                 if (other.GetComponent<DragableItem>() != null) {
                     if (!other.GetComponent<DragableItem>().isDragging && other.gameObject == phone) {
-                        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Call for ambulance.");
+                        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} โทรเรียกรถพยาบาล");
                         other.gameObject.GetComponent<IUseable>().UseItem();
                         CPRStageStepManager.instance.OnStepCompleted();
                     }

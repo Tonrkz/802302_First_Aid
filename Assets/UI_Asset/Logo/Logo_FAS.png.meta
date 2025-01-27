@@ -88,7 +88,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -97,7 +97,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,7 +125,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -563,7 +563,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -572,7 +572,25 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Logo_FAS_0: 1333283169285730080
+      Logo_FAS_1: 4603014146450329691
+      Logo_FAS_10: 2241803727640730548
+      Logo_FAS_11: -5860332161427125758
+      Logo_FAS_12: -4251980850113893493
+      Logo_FAS_13: 1580296052594978750
+      Logo_FAS_14: -538027822239246685
+      Logo_FAS_15: 4574713604038719039
+      Logo_FAS_16: -8741492506671959827
+      Logo_FAS_17: -2531985475742220196
+      Logo_FAS_2: -2871136304476541250
+      Logo_FAS_3: 4275161135333093703
+      Logo_FAS_4: 545501750987768396
+      Logo_FAS_5: 6429026393131769479
+      Logo_FAS_6: -1670215838035172973
+      Logo_FAS_7: -4997091758401946423
+      Logo_FAS_8: -6975907430469245342
+      Logo_FAS_9: -6725138549600336167
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -71,16 +71,16 @@ public class CPRStageStepManager : MonoBehaviour {
         }
         switch (currentStep) {
             case Enum_CPRStageStep.StepOne:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Check for breath.");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ตรวจสอบลมหายใจ");
                 break;
             case Enum_CPRStageStep.StepTwo:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Call for ambulance.");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} โทรเรียกรถพยาบาล");
                 break;
             case Enum_CPRStageStep.StepThree:
                 CPRMinigameManager.instance.EndCPRMinigame();
                 break;
             case Enum_CPRStageStep.StepFour:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} Help breathing.");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ผายปอด");
                 break;
             case Enum_CPRStageStep.End:
                 break;

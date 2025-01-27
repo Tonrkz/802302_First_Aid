@@ -1,0 +1,1326 @@
+fileFormatVersion: 2
+guid: 152206d675e638348822b87e9b752ecb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8915323856778734432
+    second: IMG_1992_0
+  - first:
+      213: -2447317453711131608
+    second: IMG_1992_1
+  - first:
+      213: -1767967875276578227
+    second: IMG_1992_2
+  - first:
+      213: -1894307309357861976
+    second: IMG_1992_3
+  - first:
+      213: 9047906341330375229
+    second: IMG_1992_4
+  - first:
+      213: -780122195930409862
+    second: IMG_1992_5
+  - first:
+      213: -8940664440327194131
+    second: IMG_1992_6
+  - first:
+      213: -1984365001095778533
+    second: IMG_1992_7
+  - first:
+      213: -8349813031620818398
+    second: IMG_1992_8
+  - first:
+      213: -2436669191306377496
+    second: IMG_1992_9
+  - first:
+      213: -5834778551115230955
+    second: IMG_1992_10
+  - first:
+      213: -9157523678033304008
+    second: IMG_1992_11
+  - first:
+      213: 2074391761251455673
+    second: IMG_1992_12
+  - first:
+      213: 2596251451218329903
+    second: IMG_1992_13
+  - first:
+      213: 3183356047468547436
+    second: IMG_1992_14
+  - first:
+      213: -7682730554068943092
+    second: IMG_1992_15
+  - first:
+      213: -7449114575473503209
+    second: IMG_1992_16
+  - first:
+      213: -2244522824775104499
+    second: IMG_1992_17
+  - first:
+      213: -1084939391714006760
+    second: IMG_1992_18
+  - first:
+      213: 5825098312639633560
+    second: IMG_1992_19
+  - first:
+      213: -4129706718218575718
+    second: IMG_1992_20
+  - first:
+      213: 2804119937354872928
+    second: IMG_1992_21
+  - first:
+      213: 4168927307555631465
+    second: IMG_1992_22
+  - first:
+      213: -7487658391821779672
+    second: IMG_1992_23
+  - first:
+      213: 9200686268131558926
+    second: IMG_1992_24
+  - first:
+      213: 3549558727648417720
+    second: IMG_1992_25
+  - first:
+      213: 986411866060919494
+    second: IMG_1992_26
+  - first:
+      213: 4033950382995277501
+    second: IMG_1992_27
+  - first:
+      213: 323275844937688438
+    second: IMG_1992_28
+  - first:
+      213: 3502123988505100552
+    second: IMG_1992_29
+  - first:
+      213: -493334715352690155
+    second: IMG_1992_30
+  - first:
+      213: 7064312630043245163
+    second: IMG_1992_31
+  - first:
+      213: 5257234520518915506
+    second: IMG_1992_32
+  - first:
+      213: 7984675038751270069
+    second: IMG_1992_33
+  - first:
+      213: 7901812786667609555
+    second: IMG_1992_34
+  - first:
+      213: 1053351232201309087
+    second: IMG_1992_35
+  - first:
+      213: -3674462626129741593
+    second: IMG_1992_36
+  - first:
+      213: 7473788318305305503
+    second: IMG_1992_37
+  - first:
+      213: -1688533740875879185
+    second: IMG_1992_38
+  - first:
+      213: 7555191979071513747
+    second: IMG_1992_39
+  - first:
+      213: 6314415282613917061
+    second: IMG_1992_40
+  - first:
+      213: -6413711662157343349
+    second: IMG_1992_41
+  - first:
+      213: -2485974559306018327
+    second: IMG_1992_42
+  - first:
+      213: -4744455059922286857
+    second: IMG_1992_43
+  - first:
+      213: -4863604386053032479
+    second: IMG_1992_44
+  - first:
+      213: -8993067079334194977
+    second: IMG_1992_45
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: IMG_1992_0
+      rect:
+        serializedVersion: 2
+        x: 1495
+        y: 2638
+        width: 23
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06bacd4ffc799bb70800000000000000
+      internalID: 8915323856778734432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_1
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 2649
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82c3fe60eb1690ed0800000000000000
+      internalID: -2447317453711131608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_2
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2649
+        width: 12
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4266d3a59ae677e0800000000000000
+      internalID: -1767967875276578227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_3
+      rect:
+        serializedVersion: 2
+        x: 1533
+        y: 2647
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a37c42e98116b5e0800000000000000
+      internalID: -1894307309357861976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_4
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 2636
+        width: 42
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32500c21ee909d70800000000000000
+      internalID: 9047906341330375229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_5
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 2611
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a749b2efef27c25f0800000000000000
+      internalID: -780122195930409862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_6
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 2621
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9b45aaf016ce380800000000000000
+      internalID: -8940664440327194131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_7
+      rect:
+        serializedVersion: 2
+        x: 1609
+        y: 2604
+        width: 42
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1fe7fc8b8e1674e0800000000000000
+      internalID: -1984365001095778533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_8
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 2618
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a405579418f1c80800000000000000
+      internalID: -8349813031620818398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_9
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 2576
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e68b01d7463f2ed0800000000000000
+      internalID: -2436669191306377496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_10
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 2581
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51155bd52d3b60fa0800000000000000
+      internalID: -5834778551115230955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_11
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 2588
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 836a894cbb0f9e080800000000000000
+      internalID: -9157523678033304008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_12
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 2580
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2d366f058b9cc10800000000000000
+      internalID: 2074391761251455673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_13
+      rect:
+        serializedVersion: 2
+        x: 1480
+        y: 2592
+        width: 6
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21067970fcb70420800000000000000
+      internalID: 2596251451218329903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_14
+      rect:
+        serializedVersion: 2
+        x: 1486
+        y: 2581
+        width: 23
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d44f2857d8d2c20800000000000000
+      internalID: 3183356047468547436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_15
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2590
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0f3ea31445716590800000000000000
+      internalID: -7682730554068943092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_16
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 2576
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71497bdb2cd6f9890800000000000000
+      internalID: -7449114575473503209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_17
+      rect:
+        serializedVersion: 2
+        x: 1512
+        y: 2590
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d080603026ad9d0e0800000000000000
+      internalID: -2244522824775104499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_18
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 2587
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 819ee0a1f5581f0f0800000000000000
+      internalID: -1084939391714006760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_19
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 2578
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898dc9a7d08e6d050800000000000000
+      internalID: 5825098312639633560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_20
+      rect:
+        serializedVersion: 2
+        x: 1535
+        y: 2579
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a90a902be9550b6c0800000000000000
+      internalID: -4129706718218575718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_21
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 2561
+        width: 19
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 068b0a5e93c3ae620800000000000000
+      internalID: 2804119937354872928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_22
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 2571
+        width: 27
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 961774d5c410bd930800000000000000
+      internalID: 4168927307555631465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_23
+      rect:
+        serializedVersion: 2
+        x: 1296
+        y: 2357
+        width: 266
+        height: 223
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82d7dfb2d5e761890800000000000000
+      internalID: -7487658391821779672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_24
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 2568
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e06cbcdd9676faf70800000000000000
+      internalID: 9200686268131558926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_25
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 2561
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b71fde3bd0924130800000000000000
+      internalID: 3549558727648417720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_26
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 2520
+        width: 62
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c29acead5070bd00800000000000000
+      internalID: 986411866060919494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_27
+      rect:
+        serializedVersion: 2
+        x: 1672
+        y: 2564
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db60cf320887bf730800000000000000
+      internalID: 4033950382995277501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_28
+      rect:
+        serializedVersion: 2
+        x: 1679
+        y: 2550
+        width: 13
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675a9fd0ba18c7400800000000000000
+      internalID: 323275844937688438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_29
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 2561
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8018836663b0a9030800000000000000
+      internalID: 3502123988505100552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_30
+      rect:
+        serializedVersion: 2
+        x: 1555
+        y: 2491
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512d800b0b25729f0800000000000000
+      internalID: -493334715352690155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_31
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 2500
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6a7800a8ea790260800000000000000
+      internalID: 7064312630043245163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_32
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 2492
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5737041f275f840800000000000000
+      internalID: 5257234520518915506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_33
+      rect:
+        serializedVersion: 2
+        x: 1645
+        y: 2447
+        width: 38
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b4a2b3a4a34fce60800000000000000
+      internalID: 7984675038751270069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_34
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 2482
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd56f62dd0e8ad60800000000000000
+      internalID: 7901812786667609555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_35
+      rect:
+        serializedVersion: 2
+        x: 1577
+        y: 2469
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9b34136d514e9e00800000000000000
+      internalID: 1053351232201309087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_36
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 2452
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8761da5bfa10dc0800000000000000
+      internalID: -3674462626129741593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_37
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 2459
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f934d0fa0ea38b760800000000000000
+      internalID: 7473788318305305503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_38
+      rect:
+        serializedVersion: 2
+        x: 1637
+        y: 2448
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fece4d7428f1198e0800000000000000
+      internalID: -1688533740875879185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_39
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 2449
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 394207a631f69d860800000000000000
+      internalID: 7555191979071513747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_40
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 2455
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 585108c8e3f41a750800000000000000
+      internalID: 6314415282613917061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_41
+      rect:
+        serializedVersion: 2
+        x: 1661
+        y: 2460
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b85d45d793bedf6a0800000000000000
+      internalID: -6413711662157343349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_42
+      rect:
+        serializedVersion: 2
+        x: 1557
+        y: 2433
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e118ef3f4b008dd0800000000000000
+      internalID: -2485974559306018327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_43
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 724
+        width: 1637
+        height: 1598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f6078c924f482eb0800000000000000
+      internalID: -4744455059922286857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_44
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 2313
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e5f6415491018cb0800000000000000
+      internalID: -4863604386053032479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IMG_1992_45
+      rect:
+        serializedVersion: 2
+        x: 1581
+        y: 2318
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd0960f7325323380800000000000000
+      internalID: -8993067079334194977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      IMG_1992_0: 8915323856778734432
+      IMG_1992_1: -2447317453711131608
+      IMG_1992_10: -5834778551115230955
+      IMG_1992_11: -9157523678033304008
+      IMG_1992_12: 2074391761251455673
+      IMG_1992_13: 2596251451218329903
+      IMG_1992_14: 3183356047468547436
+      IMG_1992_15: -7682730554068943092
+      IMG_1992_16: -7449114575473503209
+      IMG_1992_17: -2244522824775104499
+      IMG_1992_18: -1084939391714006760
+      IMG_1992_19: 5825098312639633560
+      IMG_1992_2: -1767967875276578227
+      IMG_1992_20: -4129706718218575718
+      IMG_1992_21: 2804119937354872928
+      IMG_1992_22: 4168927307555631465
+      IMG_1992_23: -7487658391821779672
+      IMG_1992_24: 9200686268131558926
+      IMG_1992_25: 3549558727648417720
+      IMG_1992_26: 986411866060919494
+      IMG_1992_27: 4033950382995277501
+      IMG_1992_28: 323275844937688438
+      IMG_1992_29: 3502123988505100552
+      IMG_1992_3: -1894307309357861976
+      IMG_1992_30: -493334715352690155
+      IMG_1992_31: 7064312630043245163
+      IMG_1992_32: 5257234520518915506
+      IMG_1992_33: 7984675038751270069
+      IMG_1992_34: 7901812786667609555
+      IMG_1992_35: 1053351232201309087
+      IMG_1992_36: -3674462626129741593
+      IMG_1992_37: 7473788318305305503
+      IMG_1992_38: -1688533740875879185
+      IMG_1992_39: 7555191979071513747
+      IMG_1992_4: 9047906341330375229
+      IMG_1992_40: 6314415282613917061
+      IMG_1992_41: -6413711662157343349
+      IMG_1992_42: -2485974559306018327
+      IMG_1992_43: -4744455059922286857
+      IMG_1992_44: -4863604386053032479
+      IMG_1992_45: -8993067079334194977
+      IMG_1992_5: -780122195930409862
+      IMG_1992_6: -8940664440327194131
+      IMG_1992_7: -1984365001095778533
+      IMG_1992_8: -8349813031620818398
+      IMG_1992_9: -2436669191306377496
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
