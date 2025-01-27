@@ -172,7 +172,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_Stage_Deco2_0: 1372041213908058312
+      UI_Stage_Deco2_1: 1094033488273410612
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 46b363ee07a120d48853ec8524c53897
+guid: 76f0147137b0002458de1e9b20fd10f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6683875910789745937
-    second: UI_Bubble_Score_0
+      213: -3171914257519504321
+    second: IMG_1993_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UI_Bubble_Score_0
+      name: IMG_1993_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 203
-        height: 110
+        x: 594
+        y: 824
+        width: 1304
+        height: 1859
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fe23696954a1e33a0800000000000000
-      internalID: -6683875910789745937
+      spriteID: f349d8ec9c81bf3d0800000000000000
+      internalID: -3171914257519504321
       vertices: []
       indices: 
       edges: []
@@ -147,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      UI_Bubble_Score_0: -6683875910789745937
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

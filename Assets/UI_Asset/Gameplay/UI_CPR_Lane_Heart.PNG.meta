@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_CPR_Lane_Heart_0: -743777803419844432
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
