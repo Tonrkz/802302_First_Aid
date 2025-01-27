@@ -26,7 +26,7 @@ public class ScoreManager : MonoBehaviour {
         score += deltaScore;
         string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} ดีเยี่ยม!");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} กดหน้าอกถูกจังหวะอย่างมาก!");
     }
 
     public void GoodBeat() {
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour {
         score += deltaScore;
         string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} เยี่ยม!");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{deltaScore} กดหน้าอกถูกจังหวะ!");
     }
 
     public void MissedBeat() {
@@ -42,7 +42,7 @@ public class ScoreManager : MonoBehaviour {
         score += deltaScore;
         string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
-        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"{deltaScore} พลาด!");
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"{deltaScore} กดหน้าอกผิดจังหวะ!");
     }
 
     public void AddScore() {
@@ -59,5 +59,19 @@ public class ScoreManager : MonoBehaviour {
         string fourDigitScore = score.ToString("D3");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.scoreText, $"{fourDigitScore}");
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, "-3 ผิด");
+        if (score <= 0) {
+            GameOver();
+        }
+    }
+
+    public void GameOver() {
+        UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
+        UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIGameOver);
+    }
+
+    public void StageCleared() {
+        UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
+        UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
+        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{score}");
     }
 }

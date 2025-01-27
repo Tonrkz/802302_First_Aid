@@ -4,6 +4,10 @@ public class BurnStageStepManager : MonoBehaviour {
     public static BurnStageStepManager instance;
     internal Enum_BurnStageStep currentStep = Enum_BurnStageStep.StepOne;
 
+    void Awake() {
+        instance = this;
+    }
+
     public void UpdateStep() {
         ++currentStep;
         Debug.Log($"Step Updated!\nCurrent Step: {currentStep}");
@@ -21,9 +25,9 @@ public class BurnStageStepManager : MonoBehaviour {
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore}");
                 break;
         }
-    }
-
-    void Awake() {
-        instance = this;
+        if (currentStep == Enum_BurnStageStep.EndStage) {
+            UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
+            UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{ScoreManager.instance.score}");
+        }
     }
 }

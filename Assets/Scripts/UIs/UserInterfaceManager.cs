@@ -13,6 +13,7 @@ public class UserInterfaceManager : MonoBehaviour {
     [SerializeField] internal GameObject UIPaused;
     [SerializeField] internal GameObject UIGameOver;
     [SerializeField] internal GameObject UIResult;
+    [SerializeField] internal TextMeshProUGUI UIResultScoreText;
     [SerializeField] internal GameObject UITutorial;
 
     [Header("Attributes")]

@@ -527,7 +527,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.16862746}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2023,6 +2023,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scoreText: {fileID: 0}
   updateScoreText: {fileID: 0}
+  UIHeadUpDisplay: {fileID: 0}
+  UIPaused: {fileID: 0}
+  UIGameOver: {fileID: 0}
+  UIResult: {fileID: 0}
+  UIResultScoreText: {fileID: 0}
+  UITutorial: {fileID: 0}
 --- !u!1 &1413799592
 GameObject:
   m_ObjectHideFlags: 0
