@@ -333,7 +333,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E14\u0E48\u0E32\u0E19\u0E17\u0E35\u0E48 2"
+  m_text: "\u0E14\u0E48\u0E32\u0E19\u0E17\u0E35\u0E48 1"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
   m_sharedMaterial: {fileID: -7774512699622065192, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -815,8 +815,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -539.9, y: -182.19995}
-  m_SizeDelta: {x: 630, y: 80}
+  m_AnchoredPosition: {x: -552.8993, y: -182.19995}
+  m_SizeDelta: {x: 655.9985, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129810423
 MonoBehaviour:
@@ -838,7 +838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E41\u0E1C\u0E25\u0E19\u0E49\u0E33\u0E23\u0E49\u0E2D\u0E19\u0E25\u0E27\u0E01"
+  m_text: "\u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
   m_sharedMaterial: {fileID: -7774512699622065192, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
@@ -872,10 +872,10 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -1071,7 +1071,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
@@ -1392,7 +1392,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1525,10 +1525,10 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 2d5787ad8b97ce4468d185859fc3d239, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1804ee9bfd3e3c947972bfc39c6e85d2, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2575,7 +2575,7 @@ MonoBehaviour:
   UIPaused: {fileID: 2136673430}
   UIGameOver: {fileID: 237422445}
   UIResult: {fileID: 1522367474}
-  UIResultScoreText: {fileID: 2007181997}
+  UIResultScoreText: {fileID: 291950807}
   UITutorial: {fileID: 735568034}
 --- !u!1 &633788678
 GameObject:
@@ -4275,7 +4275,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -4287,7 +4287,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
@@ -4296,7 +4296,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BurnStage
+          m_StringArgument: ScratchStageScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &982211942
@@ -4556,7 +4556,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -6280,7 +6280,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -6292,7 +6292,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
@@ -6301,7 +6301,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BurnStage
+          m_StringArgument: ScratchStageScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1399663654
@@ -6507,7 +6507,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
@@ -7350,7 +7350,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 610255818}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
@@ -7366,7 +7366,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 610255818}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
@@ -7422,7 +7422,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
@@ -7434,7 +7434,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
@@ -7446,7 +7446,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
@@ -7686,7 +7686,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E1B\u0E23\u0E30\u0E40\u0E20\u0E17............................................................."
+  m_text: "\u0E0A\u0E37\u0E48\u0E2D............................................................."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
   m_sharedMaterial: {fileID: -7774512699622065192, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
@@ -7720,7 +7720,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -7821,7 +7821,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 610255818}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
@@ -7837,7 +7837,7 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 0}
+        - m_Target: {fileID: 610255818}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleDownUI
           m_Mode: 2
@@ -7893,7 +7893,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
@@ -7905,7 +7905,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
@@ -7917,7 +7917,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
@@ -8327,7 +8327,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -8339,7 +8339,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
@@ -8630,7 +8630,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
@@ -8642,7 +8642,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 610255818}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
@@ -9232,7 +9232,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E14\u0E48\u0E32\u0E19\u0E17\u0E35\u0E48 2: \u0E41\u0E1C\u0E25\u0E19\u0E49\u0E33\u0E23\u0E49\u0E2D\u0E19\u0E25\u0E27\u0E01"
+  m_text: "\u0E14\u0E48\u0E32\u0E19\u0E17\u0E35\u0E48 1: \u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
   m_sharedMaterial: {fileID: -7774512699622065192, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
@@ -9269,7 +9269,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: -5
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -9326,7 +9326,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2136673431
 RectTransform:
   m_ObjectHideFlags: 0
