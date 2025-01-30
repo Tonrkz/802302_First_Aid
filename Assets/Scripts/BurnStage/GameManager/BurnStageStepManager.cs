@@ -26,8 +26,7 @@ public class BurnStageStepManager : MonoBehaviour {
                 break;
         }
         if (currentStep == Enum_BurnStageStep.EndStage) {
-            UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
-            UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{ScoreManager.instance.score}");
+            ScoreManager.instance.StageCleared();
         }
     }
 }
