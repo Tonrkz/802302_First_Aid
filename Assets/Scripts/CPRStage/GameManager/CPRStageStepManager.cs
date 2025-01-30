@@ -58,6 +58,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.End:
                 Debug.Log("End");
+                ScoreManager.instance.StageCleared();
                 break;
             default:
                 Debug.Log("Invalid Step");

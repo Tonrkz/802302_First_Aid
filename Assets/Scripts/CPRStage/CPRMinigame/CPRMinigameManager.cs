@@ -6,6 +6,7 @@ public class CPRMinigameManager : MonoBehaviour {
 
     [SerializeField] GameObject CPRUserInterface;
     [SerializeField] GameObject beatPrefab;
+    [SerializeField] GameObject spawnPoint;
     Byte beatCount = 30;
     Byte beatCounter = 0;
     Byte beatMissed = 0;
@@ -39,12 +40,14 @@ public class CPRMinigameManager : MonoBehaviour {
     internal void MissedBeat() {
         beatMissed++;
         if (beatMissed >= 7) {
-            EndCPRMinigame(); //Game Over
+            EndCPRMinigame();
+            ScoreManager.instance.GameOver(); //Game Over
         }
     }
 
     void SpawnBeat() {
-        GameObject beat = Instantiate(beatPrefab, CPRUserInterface.transform, false);
+        GameObject beat = Instantiate(beatPrefab, spawnPoint.transform.position, Quaternion.identity);
+        beat.transform.SetParent(spawnPoint.transform);
         Debug.Log("Beat Spawned");
         beatCounter++;
     }
