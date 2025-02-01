@@ -8,10 +8,8 @@ public class BurnStageStepManager : MonoBehaviour {
         instance = this;
     }
 
-    public void UpdateStep() {
-        ++currentStep;
-        Debug.Log($"Step Updated!\nCurrent Step: {currentStep}");
-        switch (currentStep - 1) {
+    public void DisplayStepText() {
+        switch (currentStep) {
             case Enum_BurnStageStep.StepOne:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ล้างแผลด้วยน้ำสะอาด");
                 break;
@@ -25,6 +23,11 @@ public class BurnStageStepManager : MonoBehaviour {
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore}");
                 break;
         }
+    }
+
+    public void UpdateStep() {
+        ++currentStep;
+        Debug.Log($"Step Updated!\nCurrent Step: {currentStep}");
         if (currentStep == Enum_BurnStageStep.EndStage) {
             ScoreManager.instance.StageCleared();
         }

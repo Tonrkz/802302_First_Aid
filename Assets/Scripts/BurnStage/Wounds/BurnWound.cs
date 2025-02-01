@@ -4,9 +4,15 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 public class BurnWound : MonoBehaviour {
+    [Header("References")]
+    [SerializeField] BurnStageCharacter burnStageCharacter;
 
     [Header("Attributes")]
     [SerializeField] List<GameObject> itemForEachStep = new List<GameObject>();
+
+    void Start() {
+        burnStageCharacter = GetComponentInParent<BurnStageCharacter>();
+    }
 
     void OnTriggerStay2D(Collider2D other) {
         if (!other.gameObject.GetComponent<DragableItem>().isDragging) {
@@ -14,11 +20,13 @@ public class BurnWound : MonoBehaviour {
                 Debug.Log("Right Item");
                 other.GetComponent<IUseable>().UseItem();
                 ScoreManager.instance.AddScore();
-                BurnStageStepManager.instance.UpdateStep();
+                BurnStageStepManager.instance.DisplayStepText();
+                burnStageCharacter.OnCorrectItemForEachStep();
             }
             else {
                 Debug.Log("Wrong Item");
                 ScoreManager.instance.SubtractScore();
+                burnStageCharacter.OnWrongItem();
             }
         }
     }
