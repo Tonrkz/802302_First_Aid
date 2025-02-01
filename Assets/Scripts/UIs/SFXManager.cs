@@ -18,6 +18,7 @@ public class SFXManager : MonoBehaviour {
 
     public void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume) {
         AudioSource audioSource = Instantiate(SFXObject, spawnTransform.position, Quaternion.identity);
+        DontDestroyOnLoad(audioSource.gameObject);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
         audioSource.Play();

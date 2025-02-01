@@ -204,6 +204,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1401022194}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
         m_Arguments:
@@ -211,7 +223,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: BurnStage
+          m_StringArgument: BurnStageSFXTest
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &91771248
@@ -269,6 +281,18 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1401022194}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 89d1cbc6bfdd9804ab98b7d27952e7d5, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 285119905}
           m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
           m_MethodName: set_text
@@ -321,6 +345,51 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!1 &107603415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 107603417}
+  - component: {fileID: 107603416}
+  m_Layer: 0
+  m_Name: SFXManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &107603416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107603415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8dcaf1161b3444aacf242cf2438cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SFXObject: {fileID: 4499734760693396061, guid: 98cd12d2c5d297e4393c774cbc00aa3b, type: 3}
+--- !u!4 &107603417
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 107603415}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4613424, y: -0.08053787, z: -0.05083778}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &220934933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1290,6 +1359,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1401022194}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: f29f9a821862b9e4680de0195fc7b702, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -1367,6 +1448,18 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1401022194}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: ff2bc76ac6d647b419894828b800105d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1401022194}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
@@ -1787,6 +1880,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1401022194}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
         m_Arguments:
@@ -1852,6 +1957,18 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1401022194}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 89d1cbc6bfdd9804ab98b7d27952e7d5, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 285119905}
           m_TargetAssemblyTypeName: TMPro.TMP_Text, Unity.TextMeshPro
           m_MethodName: set_text
@@ -2114,6 +2231,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1401022194}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: LoadSceneViaName
         m_Mode: 5
         m_Arguments:
@@ -2198,6 +2327,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 1225072442}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1401022194}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 89d1cbc6bfdd9804ab98b7d27952e7d5, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -2452,6 +2593,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1401022194}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: b4b9a378731c2dc4bb1df3bbc5e2c172, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1401022194}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -2529,6 +2682,18 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
+        - m_Target: {fileID: 1401022194}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: ff2bc76ac6d647b419894828b800105d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
         - m_Target: {fileID: 1401022194}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
@@ -2638,6 +2803,7 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 107603417}
   - {fileID: 320223088}
   - {fileID: 1401022193}
   - {fileID: 1352060830}
