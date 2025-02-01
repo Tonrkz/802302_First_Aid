@@ -13,6 +13,9 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     Vector2 originPosition;
     float lerpSpeed = 0.1f;
 
+    [Header("Audio")]
+    [SerializeField] AudioClip clickSound;
+
     void Awake() {
         GameObject mainCam = GameObject.Find("Main Camera");
         if (mainCam.GetComponent<Physics2DRaycaster>() == null) {
@@ -67,6 +70,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData) {
         Debug.Log($"Clicked: {eventData.pointerCurrentRaycast.gameObject.name}");
+        SFXManager.instance.PlaySFXClip(clickSound, transform.transform, 1f);
     }
 
     public void OnPointerUp(PointerEventData eventData) {

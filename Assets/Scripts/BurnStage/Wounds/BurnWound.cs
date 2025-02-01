@@ -10,6 +10,10 @@ public class BurnWound : MonoBehaviour {
     [Header("Attributes")]
     [SerializeField] List<GameObject> itemForEachStep = new List<GameObject>();
 
+    [Header("Audio")]
+    [SerializeField] AudioClip correctItemSFX;
+    [SerializeField] AudioClip wrongItemSFX;
+
     void Start() {
         burnStageCharacter = GetComponentInParent<BurnStageCharacter>();
     }
@@ -18,6 +22,7 @@ public class BurnWound : MonoBehaviour {
         if (!other.gameObject.GetComponent<DragableItem>().isDragging) {
             if (other.gameObject == itemForEachStep[(Byte)GetStageStep()]) {
                 Debug.Log("Right Item");
+                SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
                 other.GetComponent<IUseable>().UseItem();
                 ScoreManager.instance.AddScore();
                 BurnStageStepManager.instance.DisplayStepText();
@@ -25,6 +30,7 @@ public class BurnWound : MonoBehaviour {
             }
             else {
                 Debug.Log("Wrong Item");
+                SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
                 ScoreManager.instance.SubtractScore();
                 burnStageCharacter.OnWrongItem();
             }

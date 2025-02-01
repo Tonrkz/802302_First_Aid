@@ -48,6 +48,10 @@ public class UserInterfaceManager : MonoBehaviour {
         }
     }
 
+    public void PlaySFXOnUI(AudioClip audioClip) {
+        SFXManager.instance.PlaySFXClip(audioClip, transform, 1f);
+    }
+
     public void ScaleUpUI(GameObject ui) {
         ui.transform.localScale = new Vector3(1.1f, 1.1f, 1.1f);
     }
