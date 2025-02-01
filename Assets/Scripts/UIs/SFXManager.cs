@@ -13,6 +13,7 @@ public class SFXManager : MonoBehaviour {
         else {
             Destroy(this);
         }
+        DontDestroyOnLoad(this);
     }
 
     public void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume) {
