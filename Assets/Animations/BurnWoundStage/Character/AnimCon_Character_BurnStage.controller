@@ -137,7 +137,16 @@ AnimatorController:
     m_Name: Step 2
     m_StateMachine: {fileID: 3450208958497206257}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: 2595070585266466640}
+      m_Motion: {fileID: 7400000, guid: bbd89ab13824893478d846feb020d003, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 4536882716337987633}
+      m_Motion: {fileID: 7400000, guid: 1431200b70551484abd229d1f925bd3e, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 8165431736787516572}
+      m_Motion: {fileID: 7400000, guid: 28664d4c895a8854db17f237ea5c1825, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -187,7 +196,7 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: 1
   m_HasExitTime: 1

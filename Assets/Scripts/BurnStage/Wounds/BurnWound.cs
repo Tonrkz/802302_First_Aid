@@ -20,6 +20,7 @@ public class BurnWound : MonoBehaviour {
                 Debug.Log("Right Item");
                 other.GetComponent<IUseable>().UseItem();
                 ScoreManager.instance.AddScore();
+                BurnStageStepManager.instance.DisplayStepText();
                 burnStageCharacter.OnCorrectItemForEachStep();
             }
             else {
