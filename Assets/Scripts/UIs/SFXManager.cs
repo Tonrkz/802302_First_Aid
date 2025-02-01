@@ -14,10 +14,12 @@ public class SFXManager : MonoBehaviour {
             Destroy(this);
         }
         DontDestroyOnLoad(this);
+        
     }
 
     public void PlaySFXClip(AudioClip audioClip, Transform spawnTransform, float volume) {
         AudioSource audioSource = Instantiate(SFXObject, spawnTransform.position, Quaternion.identity);
+        audioSource.ignoreListenerPause = true;
         DontDestroyOnLoad(audioSource.gameObject);
         audioSource.clip = audioClip;
         audioSource.volume = volume;
