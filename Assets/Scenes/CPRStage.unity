@@ -2648,6 +2648,7 @@ GameObject:
   - component: {fileID: 581235807}
   - component: {fileID: 581235809}
   - component: {fileID: 581235810}
+  - component: {fileID: 581235811}
   m_Layer: 0
   m_Name: Cellphone
   m_TagString: Untagged
@@ -2738,6 +2739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &581235809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2796,6 +2798,51 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1.13, y: 1.78}
   m_EdgeRadius: 0
+--- !u!114 &581235811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581235804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1527231552}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: ScaleUpUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 581235804}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1527231552}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: ScaleDownUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 581235804}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &685995315
 GameObject:
   m_ObjectHideFlags: 0
@@ -4513,6 +4560,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   deltaScore: 0
+  stageClearedSFX: {fileID: 0}
+  stageFailedSFX: {fileID: 0}
 --- !u!4 &961116849
 Transform:
   m_ObjectHideFlags: 0
@@ -4612,6 +4661,7 @@ GameObject:
   - component: {fileID: 998951819}
   - component: {fileID: 998951820}
   - component: {fileID: 998951821}
+  - component: {fileID: 998951822}
   m_Layer: 0
   m_Name: Shoes
   m_TagString: Untagged
@@ -4702,6 +4752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!60 &998951821
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4757,6 +4808,51 @@ PolygonCollider2D:
       - {x: 0.8807416, y: 0.7143481}
       - {x: 0.7735195, y: -0.76433897}
   m_UseDelaunayMesh: 0
+--- !u!114 &998951822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 998951817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1527231552}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: ScaleUpUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 998951817}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1527231552}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: ScaleDownUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 998951817}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1006858413
 GameObject:
   m_ObjectHideFlags: 0
