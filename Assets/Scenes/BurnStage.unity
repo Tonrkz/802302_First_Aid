@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 43938225}
   - component: {fileID: 43938224}
   - component: {fileID: 43938223}
+  - component: {fileID: 43938226}
   m_Layer: 5
   m_Name: Button_Quit
   m_TagString: Untagged
@@ -279,6 +280,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -327,6 +340,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 43938221}
   m_CullTransparentMesh: 1
+--- !u!114 &43938226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43938221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &63175533
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +502,18 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 185326733}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: ff2bc76ac6d647b419894828b800105d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -530,6 +584,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: aa98d29ea4713014885a5adbb4941181, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
@@ -1047,6 +1113,7 @@ GameObject:
   - component: {fileID: 197269489}
   - component: {fileID: 197269488}
   - component: {fileID: 197269487}
+  - component: {fileID: 197269490}
   m_Layer: 5
   m_Name: Button_LevelSelect
   m_TagString: Untagged
@@ -1120,6 +1187,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -1180,6 +1259,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197269485}
   m_CullTransparentMesh: 1
+--- !u!114 &197269490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 197269485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &238174731
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1647,7 @@ GameObject:
   - component: {fileID: 355258466}
   - component: {fileID: 355258465}
   - component: {fileID: 355258464}
+  - component: {fileID: 355258467}
   m_Layer: 0
   m_Name: Button_RestartGame
   m_TagString: Untagged
@@ -1612,6 +1721,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -1672,6 +1793,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 355258462}
   m_CullTransparentMesh: 1
+--- !u!114 &355258467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355258462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &417549388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,6 +1872,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &417549393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2095,6 +2246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &449149824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2215,6 +2367,7 @@ GameObject:
   - component: {fileID: 476672787}
   - component: {fileID: 476672786}
   - component: {fileID: 476672785}
+  - component: {fileID: 476672788}
   m_Layer: 0
   m_Name: Button_QuitGame
   m_TagString: Untagged
@@ -2288,6 +2441,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -2336,6 +2501,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 476672783}
   m_CullTransparentMesh: 1
+--- !u!114 &476672788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 476672783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &480189546
 GameObject:
   m_ObjectHideFlags: 0
@@ -2439,6 +2633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &480189550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3082,6 +3277,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: aa98d29ea4713014885a5adbb4941181, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
@@ -3178,6 +3385,18 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 623419177}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: ff2bc76ac6d647b419894828b800105d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -4293,8 +4512,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037534825}
-  - component: {fileID: 1037534824}
-  - component: {fileID: 1037534823}
   m_Layer: 5
   m_Name: UI_Result
   m_TagString: Untagged
@@ -4302,44 +4519,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &1037534823
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037534822}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1037534824
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037534822}
-  m_CullTransparentMesh: 1
 --- !u!224 &1037534825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5165,6 +5344,7 @@ GameObject:
   - component: {fileID: 1229717963}
   - component: {fileID: 1229717962}
   - component: {fileID: 1229717961}
+  - component: {fileID: 1229717964}
   m_Layer: 5
   m_Name: Button_Retry
   m_TagString: Untagged
@@ -5238,6 +5418,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -5298,6 +5490,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229717959}
   m_CullTransparentMesh: 1
+--- !u!114 &1229717964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229717959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1245707874
 GameObject:
   m_ObjectHideFlags: 0
@@ -5381,6 +5602,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: aa98d29ea4713014885a5adbb4941181, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: PauseGame
@@ -5474,6 +5707,18 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 185326733}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: ff2bc76ac6d647b419894828b800105d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -5512,6 +5757,7 @@ GameObject:
   - component: {fileID: 1255285224}
   - component: {fileID: 1255285223}
   - component: {fileID: 1255285222}
+  - component: {fileID: 1255285225}
   m_Layer: 5
   m_Name: Button_Quit
   m_TagString: Untagged
@@ -5585,6 +5831,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -5633,6 +5891,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255285220}
   m_CullTransparentMesh: 1
+--- !u!114 &1255285225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255285220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1285492323
 GameObject:
   m_ObjectHideFlags: 0
@@ -6377,6 +6664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &1581879249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6748,6 +7036,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   deltaScore: 0
+  stageClearedSFX: {fileID: 8300000, guid: 076069192e1f65a41962e0ccfbbfa345, type: 3}
+  stageFailedSFX: {fileID: 8300000, guid: c1f4046ec56a82542b0089dbd585f3b3, type: 3}
 --- !u!1 &1660150221
 GameObject:
   m_ObjectHideFlags: 0
@@ -7257,6 +7547,18 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 185326733}
           m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: ff2bc76ac6d647b419894828b800105d, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
           m_MethodName: ScaleUpUI
           m_Mode: 2
           m_Arguments:
@@ -7327,6 +7629,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: aa98d29ea4713014885a5adbb4941181, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ToggleUI
@@ -7999,6 +8313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!60 &1877359073
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -8107,6 +8422,7 @@ GameObject:
   - component: {fileID: 1907440941}
   - component: {fileID: 1907440940}
   - component: {fileID: 1907440939}
+  - component: {fileID: 1907440942}
   m_Layer: 5
   m_Name: Button_LevelSelect
   m_TagString: Untagged
@@ -8180,6 +8496,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -8240,6 +8568,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1907440937}
   m_CullTransparentMesh: 1
+--- !u!114 &1907440942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907440937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1924005142
 GameObject:
   m_ObjectHideFlags: 0
@@ -8418,6 +8775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &1932146511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8874,6 +9232,7 @@ GameObject:
   - component: {fileID: 2057422441}
   - component: {fileID: 2057422440}
   - component: {fileID: 2057422439}
+  - component: {fileID: 2057422442}
   m_Layer: 0
   m_Name: Button_Resume
   m_TagString: Untagged
@@ -8947,6 +9306,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -8962,7 +9333,7 @@ MonoBehaviour:
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2140122093}
+          m_ObjectArgument: {fileID: 742039658}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8974,7 +9345,7 @@ MonoBehaviour:
         m_MethodName: ToggleUI
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 742039658}
+          m_ObjectArgument: {fileID: 2140122093}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -9019,6 +9390,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2057422437}
   m_CullTransparentMesh: 1
+--- !u!114 &2057422442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2057422437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2070464669
 GameObject:
   m_ObjectHideFlags: 0
@@ -9205,6 +9605,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isDragging: 0
+  clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &2096856955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9352,6 +9753,7 @@ GameObject:
   - component: {fileID: 2104570574}
   - component: {fileID: 2104570573}
   - component: {fileID: 2104570572}
+  - component: {fileID: 2104570575}
   m_Layer: 0
   m_Name: Button_LevelSelect
   m_TagString: Untagged
@@ -9425,6 +9827,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 185326733}
         m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+        m_MethodName: PlaySFXOnUI
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 29a5e10ba3332554db434a432f00013a, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 185326733}
+        m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -9485,6 +9899,35 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2104570570}
   m_CullTransparentMesh: 1
+--- !u!114 &2104570575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104570570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 185326733}
+          m_TargetAssemblyTypeName: UserInterfaceManager, Assembly-CSharp
+          m_MethodName: PlaySFXOnUI
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: 46b4205a4ff196c44b0d746d0faf57e9, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2120432921
 GameObject:
   m_ObjectHideFlags: 0
@@ -9535,6 +9978,8 @@ MonoBehaviour:
   - {fileID: 2096856950}
   - {fileID: 417549388}
   - {fileID: 449149819}
+  correctItemSFX: {fileID: 8300000, guid: 0c4f31d6f77acf6489aa6d99b6aa45b5, type: 3}
+  wrongItemSFX: {fileID: 8300000, guid: 83308c084843db94b84e004f32b69db2, type: 3}
 --- !u!60 &2120432924
 PolygonCollider2D:
   m_ObjectHideFlags: 0

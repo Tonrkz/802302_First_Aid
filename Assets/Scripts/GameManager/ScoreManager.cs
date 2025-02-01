@@ -70,12 +70,14 @@ public class ScoreManager : MonoBehaviour {
 
     public void GameOver() {
         SFXManager.instance.PlaySFXClip(stageFailedSFX, transform, 1f);
+        BGMManager.instance.PlayBGMClip(BGMManager.instance.stageFailedBGM);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIGameOver);
     }
 
     public void StageCleared() {
         SFXManager.instance.PlaySFXClip(stageClearedSFX, transform, 1f);
+        BGMManager.instance.PlayBGMClip(BGMManager.instance.stageClearedBGM);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{score}");

@@ -11,9 +11,9 @@ public class SFXManager : MonoBehaviour {
             instance = this;
         }
         else {
-            Destroy(this);
+            Destroy(gameObject);
         }
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(gameObject);
         
     }
 
