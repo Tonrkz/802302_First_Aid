@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -71,6 +71,8 @@ public class CPR_NoseScript : MonoBehaviour, IPointerDownHandler, IPointerUpHand
                 SFXManager.instance.PlaySFXClip(correctSFX, transform, 1f);
             }
             if (helpBreathingCount == 0) {
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"ผายปอด");
+                SFXManager.instance.PlaySFXClip(correctSFX, transform, 1f);
                 SFXManager.instance.PlayLoopSFXClip(heartBeatSFX, transform, 0.75f, 5);
                 SFXManager.instance.PlayLoopSFXClip(breathingSFX, transform, 1f, 2);
                 CPRStageCharacter.instance.OnCorrectItemForEachStep();

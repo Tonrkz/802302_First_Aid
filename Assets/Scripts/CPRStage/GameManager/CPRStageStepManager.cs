@@ -6,6 +6,9 @@ public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
     internal Enum_CPRStageStep currentStep = Enum_CPRStageStep.StepOne;
 
+    [Header("References")]
+    [SerializeField] GameObject stageBackground;
+
     [Header("Attributes")]
     [SerializeField] GameObject noseHitbox;
     [SerializeField] GameObject correctCPRHitbox;
@@ -42,6 +45,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StepThree:
                 Debug.Log("Start CPR");
+                UserInterfaceManager.instance.FadeTint(stageBackground, new Color(0.5f, 0.5f, 0.5f, 1f));
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
                 itemUsingHitbox.SetActive(false);
@@ -52,6 +56,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
+                UserInterfaceManager.instance.FadeTint(stageBackground, Color.white);
                 noseHitbox.SetActive(true);
                 noseHitbox.GetComponent<Collider2D>().enabled = true;
                 correctCPRHitbox.SetActive(false);

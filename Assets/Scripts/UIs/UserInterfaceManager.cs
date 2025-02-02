@@ -28,10 +28,10 @@ public class UserInterfaceManager : MonoBehaviour {
     }
 
     public void UpdateText(TextMeshProUGUI UITextObject, string message) {
-        StopCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
+        StopCoroutine("FadeOutText");
         //reset alpha
-        Color tmpColor = UITextObject.color;
-        UITextObject.color = new Color(tmpColor.r, tmpColor.g, tmpColor.b, 1);
+        UITextObject.DOKill(true);
+        UITextObject.DOFade(1, 0);
         UITextObject.text = message;
         if (UITextObject == updateScoreText) {
             StartCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
@@ -85,5 +85,9 @@ public class UserInterfaceManager : MonoBehaviour {
 
     public void FadeOutUI(GameObject ui) {
         ui.GetComponent<CanvasGroup>().DOFade(0, fadeTime);
+    }
+
+    public void FadeTint(GameObject obj, Color color) {
+        obj.GetComponent<SpriteRenderer>().DOColor(color, fadeTime);
     }
 }
