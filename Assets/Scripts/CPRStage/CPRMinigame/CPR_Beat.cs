@@ -1,7 +1,11 @@
 using UnityEngine;
 
 public class CPR_Beat : MonoBehaviour {
+    [Header("Attributes")]
     internal float tempo = 120;
+
+    [Header("Audio")]
+    [SerializeField] AudioClip beatSFX;
 
     void Start() {
         tempo /= 60;
@@ -12,6 +16,7 @@ public class CPR_Beat : MonoBehaviour {
     }
 
     internal void OnPerfectTrigger() {
+        SFXManager.instance.PlaySFXClip(beatSFX, transform, 1f);
         Debug.Log("Perfect");
         ScoreManager.instance.PerfectBeat();
         CPRMinigameManager.instance.beatTriggered++;
@@ -19,6 +24,7 @@ public class CPR_Beat : MonoBehaviour {
     }
 
     internal void OnGoodTrigger() {
+        SFXManager.instance.PlaySFXClip(beatSFX, transform, 1f);
         Debug.Log("Good");
         ScoreManager.instance.GoodBeat();
         CPRMinigameManager.instance.beatTriggered++;

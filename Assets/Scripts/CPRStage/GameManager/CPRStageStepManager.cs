@@ -12,6 +12,9 @@ public class CPRStageStepManager : MonoBehaviour {
     [SerializeField] GameObject itemUsingHitbox;
     [SerializeField] List<GameObject> itemList = new List<GameObject>();
 
+    [Header("Audio")]
+    [SerializeField] AudioClip correctItemSFX;
+
     void Awake() {
         instance = this;
     }
@@ -67,6 +70,7 @@ public class CPRStageStepManager : MonoBehaviour {
     }
 
     internal void OnStepCompleted() {
+        SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
         if (currentStep != Enum_CPRStageStep.StepThree) {
             ScoreManager.instance.AddScore();
         }

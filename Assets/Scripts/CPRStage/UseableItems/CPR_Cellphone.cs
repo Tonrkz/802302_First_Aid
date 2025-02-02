@@ -18,6 +18,7 @@ public class CPR_Cellphone : MonoBehaviour, IUseable {
     }
 
     public void AnimNotifyDestroyGameObject() {
+        CPRStageStepManager.instance.OnStepCompleted();
         Destroy(gameObject);
     }
 }
