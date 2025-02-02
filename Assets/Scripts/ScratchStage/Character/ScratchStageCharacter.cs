@@ -18,8 +18,8 @@ public class ScratchStageCharacter : MonoBehaviour {
     }
 
     public void AnimNotifyUpdateStep() {
-        byte currentStep = (byte)BurnStageStepManager.instance.currentStep;
-        BurnStageStepManager.instance.UpdateStep();
+        byte currentStep = (byte)ScratchStageStepManager.instance.thisScratchStageStep;
+        ScratchStageStepManager.instance.UpdateState();
         StartCoroutine(UpdateAnimLayer(currentStep));
     }
 

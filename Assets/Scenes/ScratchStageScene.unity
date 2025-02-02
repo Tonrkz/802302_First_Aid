@@ -567,6 +567,7 @@ MonoBehaviour:
   - {fileID: 920667757}
   - {fileID: 1927206284}
   - {fileID: 1585854845}
+  scratchStageCharacter: {fileID: 1919146928}
 --- !u!1 &95855109
 GameObject:
   m_ObjectHideFlags: 0
@@ -8564,7 +8565,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -10
-  m_Sprite: {fileID: 21300000, guid: 88b2027955baf5445814da9de610ea17, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0de063bafceaa46428831b26826eb282, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

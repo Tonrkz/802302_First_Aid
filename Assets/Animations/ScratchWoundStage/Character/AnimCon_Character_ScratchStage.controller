@@ -231,7 +231,16 @@ AnimatorController:
     m_Name: Step 1
     m_StateMachine: {fileID: 2613938088088405928}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -1034971479448781426}
+      m_Motion: {fileID: 7400000, guid: 54a5190e9948d09478270ab5a5444364, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -1119976163267306622}
+      m_Motion: {fileID: 7400000, guid: db7a9e3b0e0ead5488f662b7569e7fb6, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 8776800390378244716}
+      m_Motion: {fileID: 7400000, guid: 3f24126ab5c2b6c428db7b89651f4176, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -243,7 +252,16 @@ AnimatorController:
     m_Name: Step 2
     m_StateMachine: {fileID: -1380619506634912446}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -1119976163267306622}
+      m_Motion: {fileID: 7400000, guid: d7201a708e16189469fe456d56f1bc0a, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 8776800390378244716}
+      m_Motion: {fileID: 7400000, guid: 27cce5a72d27d334a8c709f863b9003e, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -1034971479448781426}
+      m_Motion: {fileID: 7400000, guid: 289dec3c31bef2349a96080101a5d93e, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -255,7 +273,16 @@ AnimatorController:
     m_Name: Step 3
     m_StateMachine: {fileID: 3067165510543634650}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -1119976163267306622}
+      m_Motion: {fileID: 7400000, guid: cedfc6b82ad05ea4ebff975d1e4ebd78, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 8776800390378244716}
+      m_Motion: {fileID: 7400000, guid: b712b1247578d0241a2bec0d81029bf4, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -1034971479448781426}
+      m_Motion: {fileID: 7400000, guid: 3c43f85d209f56849afd7aad382669cd, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
@@ -267,7 +294,16 @@ AnimatorController:
     m_Name: Step 4
     m_StateMachine: {fileID: -1370679653364648384}
     m_Mask: {fileID: 0}
-    m_Motions: []
+    m_Motions:
+    - serializedVersion: 2
+      m_State: {fileID: -1034971479448781426}
+      m_Motion: {fileID: 7400000, guid: f221e26d93b2ced4086f683b7d5c0962, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: -1119976163267306622}
+      m_Motion: {fileID: 7400000, guid: 59d247fefd2022448b2dc02825669525, type: 2}
+    - serializedVersion: 2
+      m_State: {fileID: 8776800390378244716}
+      m_Motion: {fileID: 7400000, guid: 4b3bc8c33872a0a4ab0fdde6b667b237, type: 2}
     m_Behaviours: []
     m_BlendingMode: 0
     m_SyncedLayerIndex: 0
