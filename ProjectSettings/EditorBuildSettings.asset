@@ -9,23 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScene.unity
     guid: aa9f97069925d95449b20310f9ae1ce2
   - enabled: 1
-    path: Assets/Scenes/LevelSelectScene.unity
-    guid: 110aca9c74c4cc74a814dca8f25fcc60
-  - enabled: 1
     path: Assets/Scenes/ScratchStageScene.unity
     guid: 2616b284959721944a66f764d0177d86
   - enabled: 1
     path: Assets/Scenes/BurnStage.unity
-    guid: 00f933f9b549f7d4f9025172ca929d84
+    guid: 3ecdaa7f8669fbb48961bc85203c9f49
   - enabled: 1
     path: Assets/Scenes/CPRStage.unity
     guid: c3f67048d451e424984901d043d829d7
-  - enabled: 1
-    path: Assets/Scenes/ResultScene.unity
-    guid: b6f5147aee3933c44aaff814251a706c
-  - enabled: 1
-    path: Assets/Scenes/GameOverScene.unity
-    guid: c10c204cd9bc0624e9942d87ad75ee6e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

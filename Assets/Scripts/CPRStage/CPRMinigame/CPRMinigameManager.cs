@@ -33,7 +33,8 @@ public class CPRMinigameManager : MonoBehaviour {
                 SpawnBeat();
             }
         } else if (beatMissed + beatTriggered == beatCount && hasStarted) {
-            CPRStageStepManager.instance.OnStepCompleted();
+            EndCPRMinigame();
+            CPRStageCharacter.instance.OnCorrectItemForEachStep();
         }
     }
 

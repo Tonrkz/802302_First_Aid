@@ -1,8 +1,6 @@
 using System.Collections;
-using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
 public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
     [Header("References")]
@@ -12,6 +10,9 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public bool isDragging = false;
     Vector2 originPosition;
     float lerpSpeed = 0.1f;
+
+    [Header("Audio")]
+    [SerializeField] AudioClip clickSound;
 
     void Awake() {
         GameObject mainCam = GameObject.Find("Main Camera");
@@ -67,6 +68,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData) {
         Debug.Log($"Clicked: {eventData.pointerCurrentRaycast.gameObject.name}");
+        SFXManager.instance.PlaySFXClip(clickSound, transform.transform, 0.5f);
     }
 
     public void OnPointerUp(PointerEventData eventData) {

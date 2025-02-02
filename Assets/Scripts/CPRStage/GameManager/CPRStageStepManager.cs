@@ -6,11 +6,17 @@ public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
     internal Enum_CPRStageStep currentStep = Enum_CPRStageStep.StepOne;
 
+    [Header("References")]
+    [SerializeField] GameObject stageBackground;
+
     [Header("Attributes")]
     [SerializeField] GameObject noseHitbox;
     [SerializeField] GameObject correctCPRHitbox;
     [SerializeField] GameObject itemUsingHitbox;
     [SerializeField] List<GameObject> itemList = new List<GameObject>();
+
+    [Header("Audio")]
+    [SerializeField] AudioClip correctItemSFX;
 
     void Awake() {
         instance = this;
@@ -39,17 +45,20 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StepThree:
                 Debug.Log("Start CPR");
+                UserInterfaceManager.instance.FadeTint(stageBackground, new Color(0.5f, 0.5f, 0.5f, 1f));
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
-                itemUsingHitbox.SetActive(true);
+                itemUsingHitbox.SetActive(false);
+                CPRMinigameManager.instance.InitiateCPRMinigame();
                 foreach (GameObject item in itemList) {
                     item.SetActive(false);
                 }
-                CPRMinigameManager.instance.InitiateCPRMinigame();
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
+                UserInterfaceManager.instance.FadeTint(stageBackground, Color.white);
                 noseHitbox.SetActive(true);
+                noseHitbox.GetComponent<Collider2D>().enabled = true;
                 correctCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
                 foreach (GameObject item in itemList) {
@@ -67,6 +76,7 @@ public class CPRStageStepManager : MonoBehaviour {
     }
 
     internal void OnStepCompleted() {
+        SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
         if (currentStep != Enum_CPRStageStep.StepThree) {
             ScoreManager.instance.AddScore();
         }
@@ -79,6 +89,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StepThree:
                 CPRMinigameManager.instance.EndCPRMinigame();
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"กดหน้าอกปั๊มหัวใจ");
                 break;
             case Enum_CPRStageStep.StepFour:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ผายปอด");

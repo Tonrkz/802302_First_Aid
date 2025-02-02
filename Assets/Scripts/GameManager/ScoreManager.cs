@@ -65,13 +65,17 @@ public class ScoreManager : MonoBehaviour {
     }
 
     public void GameOver() {
+        BGMManager.instance.PlayBGMClip(BGMManager.instance.stageFailedBGM);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIGameOver);
+        UserInterfaceManager.instance.FadeinUI(UserInterfaceManager.instance.UIGameOverPanel);
     }
 
     public void StageCleared() {
+        BGMManager.instance.PlayBGMClip(BGMManager.instance.stageClearedBGM);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
+        UserInterfaceManager.instance.FadeinUI(UserInterfaceManager.instance.UIResultPanel);
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{score}");
     }
 }

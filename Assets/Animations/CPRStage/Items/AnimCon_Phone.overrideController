@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AnimCon_Phone
+  m_Controller: {fileID: 9100000, guid: 9eae2ec3eb263944f99f6ce2100551f0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f89371a7fef696143a4b0105ea2f5660, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 0501a2c8850692d49b1abfe39f517eed, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7022dfebaca1b714fa3ec7c40b981040, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 3a38025f67b50ab429799ef8b604c950, type: 2}

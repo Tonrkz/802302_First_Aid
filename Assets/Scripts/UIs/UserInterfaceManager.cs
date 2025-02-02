@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class UserInterfaceManager : MonoBehaviour {
     public static UserInterfaceManager instance;
@@ -12,7 +13,9 @@ public class UserInterfaceManager : MonoBehaviour {
     [SerializeField] internal GameObject UIHeadUpDisplay;
     [SerializeField] internal GameObject UIPaused;
     [SerializeField] internal GameObject UIGameOver;
+    [SerializeField] internal GameObject UIGameOverPanel;
     [SerializeField] internal GameObject UIResult;
+    [SerializeField] internal GameObject UIResultPanel;
     [SerializeField] internal TextMeshProUGUI UIResultScoreText;
     [SerializeField] internal GameObject UITutorial;
 
@@ -25,10 +28,10 @@ public class UserInterfaceManager : MonoBehaviour {
     }
 
     public void UpdateText(TextMeshProUGUI UITextObject, string message) {
-        StopCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
+        StopCoroutine("FadeOutText");
         //reset alpha
-        Color tmpColor = UITextObject.color;
-        UITextObject.color = new Color(tmpColor.r, tmpColor.g, tmpColor.b, 1);
+        UITextObject.DOKill(true);
+        UITextObject.DOFade(1, 0);
         UITextObject.text = message;
         if (UITextObject == updateScoreText) {
             StartCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
@@ -36,16 +39,12 @@ public class UserInterfaceManager : MonoBehaviour {
     }
 
     IEnumerator FadeOutText(TextMeshProUGUI UITextObject, float showTime, float fadeTime) {
-        float startAlpha = UITextObject.color.a;
-        float rate = 1.0f / fadeTime;
-        float progress = 0.0f;
         yield return new WaitForSeconds(showTime);
-        while (progress < 1.0) {
-            Color tmpColor = UITextObject.color;
-            UITextObject.color = new Color(tmpColor.r, tmpColor.g, tmpColor.b, Mathf.Lerp(startAlpha, 0, progress));
-            progress += rate * Time.deltaTime;
-            yield return null;
-        }
+        UITextObject.DOFade(0, fadeTime);
+    }
+
+    public void PlaySFXOnUI(AudioClip audioClip) {
+        SFXManager.instance.PlaySFXClip(audioClip, transform, 1f);
     }
 
     public void ScaleUpUI(GameObject ui) {
@@ -78,5 +77,17 @@ public class UserInterfaceManager : MonoBehaviour {
 
     public void QuitGame() {
         Application.Quit();
+    }
+
+    public void FadeinUI(GameObject ui) {
+        ui.GetComponent<CanvasGroup>().DOFade(1, fadeTime);
+    }
+
+    public void FadeOutUI(GameObject ui) {
+        ui.GetComponent<CanvasGroup>().DOFade(0, fadeTime);
+    }
+
+    public void FadeTint(GameObject obj, Color color) {
+        obj.GetComponent<SpriteRenderer>().DOColor(color, fadeTime);
     }
 }
