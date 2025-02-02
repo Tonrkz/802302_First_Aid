@@ -20,7 +20,7 @@ public class TitleUserInterfaceManager : MonoBehaviour {
     }
 
     public void OnClickLevelSelectionButton() {
-        titlePanel.DOAnchorPos(new Vector2(-screenWidth * 1.5f, 0), tweenDuration);
+        titlePanel.DOAnchorPos(new Vector2(-screenWidth, 0), tweenDuration);
         levelSelectionPanel.DOAnchorPos(new Vector2(0, 0), tweenDuration);
     }
 
