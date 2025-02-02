@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScratchStageStepManager : MonoBehaviour
 {
@@ -13,19 +13,19 @@ public class ScratchStageStepManager : MonoBehaviour
     public void DisplayStepText() {
         switch (thisScratchStageStep) {
             case Enum_ScratchStageStep.StepOne:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ��ҧ�Ŵ���ʺ��");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ล้างแผลด้วยสบู่");
                 break;
             case Enum_ScratchStageStep.StepTwo:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ��ҧ�Ŵ��¹�����Ҵ");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ล้างน้ำสะอาด");
                 break;
             case Enum_ScratchStageStep.StepThree:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} �Ѻ���¼��������");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ซับด้วยผ้าให้แห้ง");
                 break;
             case Enum_ScratchStageStep.StepFour:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ��š���������");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ใช้แอลกอฮอลเช็ดรอบ ๆ แผล");
                 break;
             case Enum_ScratchStageStep.StepFive:
-                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ��ີҴչ");
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ใช้เบตาดีนกำจัดเชื้อโรคบริเวณแผล");
                 break;
             default:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore}");
