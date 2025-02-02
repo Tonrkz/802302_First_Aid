@@ -44,15 +44,16 @@ public class CPRStageStepManager : MonoBehaviour {
                 Debug.Log("Start CPR");
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
-                itemUsingHitbox.SetActive(true);
+                itemUsingHitbox.SetActive(false);
+                CPRMinigameManager.instance.InitiateCPRMinigame();
                 foreach (GameObject item in itemList) {
                     item.SetActive(false);
                 }
-                CPRMinigameManager.instance.InitiateCPRMinigame();
                 break;
             case Enum_CPRStageStep.StepFour:
                 Debug.Log("Help Breathing");
                 noseHitbox.SetActive(true);
+                noseHitbox.GetComponent<Collider2D>().enabled = true;
                 correctCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
                 foreach (GameObject item in itemList) {
@@ -83,6 +84,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StepThree:
                 CPRMinigameManager.instance.EndCPRMinigame();
+                UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"กดหน้าอกปั๊มหัวใจ");
                 break;
             case Enum_CPRStageStep.StepFour:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ผายปอด");

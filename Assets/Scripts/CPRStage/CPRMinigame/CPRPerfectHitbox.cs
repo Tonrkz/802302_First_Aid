@@ -8,7 +8,7 @@ public class CPRPerfectHitbox : MonoBehaviour {
     [SerializeField] AudioClip heartBeatSFX;
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        SFXManager.instance.PlaySFXClip(heartBeatSFX, transform, 1f);
+        SFXManager.instance.PlaySFXClip(heartBeatSFX, transform, 0.5f);
     }
 
     private void OnTriggerStay2D(Collider2D collision) {

@@ -26,6 +26,9 @@ public class CPRMinigameManager : MonoBehaviour {
     }
 
     void Update() {
+        if(Input.GetKeyDown(KeyCode.Space)) {
+            CPRStageCharacter.instance.OnCorrectItemForEachStep();
+        }
         if (beatCounter < beatCount && hasStarted) {
             beatTimer += Time.deltaTime;
             if (beatTimer >= timeTreashold) {
@@ -33,7 +36,8 @@ public class CPRMinigameManager : MonoBehaviour {
                 SpawnBeat();
             }
         } else if (beatMissed + beatTriggered == beatCount && hasStarted) {
-            CPRStageStepManager.instance.OnStepCompleted();
+            EndCPRMinigame();
+            CPRStageCharacter.instance.OnCorrectItemForEachStep();
         }
     }
 

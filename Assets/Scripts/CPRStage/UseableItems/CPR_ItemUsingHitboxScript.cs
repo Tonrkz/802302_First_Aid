@@ -12,11 +12,11 @@ public class CPR_ItemUsingHitboxScript : MonoBehaviour {
             case Enum_CPRStageStep.StepTwo: // Call for ambulance
                 if (other.GetComponent<DragableItem>() != null) {
                     if (!other.GetComponent<DragableItem>().isDragging && other.gameObject == phone) {
-                        UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} โทรเรียกรถพยาบาล");
                         other.gameObject.GetComponent<IUseable>().UseItem();
                     }
                     else if (!other.GetComponent<DragableItem>().isDragging) {
                         SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
+                        CPRStageCharacter.instance.OnWrongItem();
                         ScoreManager.instance.SubtractScore();
                     }
                 }
@@ -25,6 +25,7 @@ public class CPR_ItemUsingHitboxScript : MonoBehaviour {
                 if (other.GetComponent<DragableItem>() != null) {
                     if (!other.GetComponent<DragableItem>().isDragging) {
                         SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
+                        CPRStageCharacter.instance.OnWrongItem();
                         ScoreManager.instance.SubtractScore();
                     }
                 }

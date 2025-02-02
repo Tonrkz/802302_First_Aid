@@ -16,7 +16,7 @@ public class CPR_Beat : MonoBehaviour {
     }
 
     internal void OnPerfectTrigger() {
-        SFXManager.instance.PlaySFXClip(beatSFX, transform, 1f);
+        SFXManager.instance.PlaySFXClip(beatSFX, transform, 0.25f);
         Debug.Log("Perfect");
         ScoreManager.instance.PerfectBeat();
         CPRMinigameManager.instance.beatTriggered++;
@@ -24,7 +24,7 @@ public class CPR_Beat : MonoBehaviour {
     }
 
     internal void OnGoodTrigger() {
-        SFXManager.instance.PlaySFXClip(beatSFX, transform, 1f);
+        SFXManager.instance.PlaySFXClip(beatSFX, transform, 0.25f);
         Debug.Log("Good");
         ScoreManager.instance.GoodBeat();
         CPRMinigameManager.instance.beatTriggered++;
