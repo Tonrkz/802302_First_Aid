@@ -5,7 +5,10 @@ using System;
 
 public class ScratchWound : MonoBehaviour
 {
-    
+    [Header("Audio")]
+    [SerializeField] AudioClip correctItemSFX;
+    [SerializeField] AudioClip wrongItemSFX;
+
     [SerializeField] List<GameObject> itemForeachStep = new List<GameObject>();
 
     private void OnTriggerStay2D(Collider2D other)
@@ -14,6 +17,7 @@ public class ScratchWound : MonoBehaviour
         {
             if(other.gameObject == itemForeachStep[(Byte)GetStageStep()])
             {
+                SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
                 Debug.Log("Right Item");
                 other.GetComponent<IUseable>().UseItem();
                 ScoreManager.instance.AddScore();
@@ -21,6 +25,7 @@ public class ScratchWound : MonoBehaviour
             }
             else
             {
+                SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
                 Debug.Log("Wrong Item");
                 ScoreManager.instance.SubtractScore();
             }
