@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AnimCon_Alcohol
+  m_Controller: {fileID: 9100000, guid: 9eae2ec3eb263944f99f6ce2100551f0, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: f89371a7fef696143a4b0105ea2f5660, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 11980d61108000b43b167d9638cc991e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 7022dfebaca1b714fa3ec7c40b981040, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 15f806e048082894caf2042b157b7de4, type: 2}

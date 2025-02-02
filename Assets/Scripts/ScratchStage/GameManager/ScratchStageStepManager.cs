@@ -10,12 +10,8 @@ public class ScratchStageStepManager : MonoBehaviour
         instance = this; 
     }
 
-    public void UpdateState()
-    {
-        thisScratchStageStep++;
-        Debug.Log($"Step Update!\n Current Step:{thisScratchStageStep}");
-        switch (thisScratchStageStep - 1)
-        {
+    public void DisplayStepText() {
+        switch (thisScratchStageStep) {
             case Enum_ScratchStageStep.StepOne:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ล้างแผลด้วยสบู่");
                 break;
@@ -35,6 +31,12 @@ public class ScratchStageStepManager : MonoBehaviour
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore}");
                 break;
         }
+    }
+
+    public void UpdateState()
+    {
+        thisScratchStageStep++;
+        Debug.Log($"Step Update!\n Current Step:{thisScratchStageStep}");
         if (thisScratchStageStep == Enum_ScratchStageStep.EndStage)
         {
             ScoreManager.instance.StageCleared();
