@@ -70,7 +70,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnPointerDown(PointerEventData eventData) {
         Debug.Log($"Clicked: {eventData.pointerCurrentRaycast.gameObject.name}");
-        SFXManager.instance.PlaySFXClip(clickSound, transform.transform, 1f);
+        SFXManager.instance.PlaySFXClip(clickSound, transform.transform, 0.5f);
     }
 
     public void OnPointerUp(PointerEventData eventData) {
