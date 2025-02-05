@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
     [Header("References")]
     Rigidbody2D rb;
+    Canvas tooltipCanvas;
 
     [Header("Attributes")]
     public bool isDragging = false;
@@ -28,6 +29,13 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
             rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
         originPosition = transform.position;
+    }
+
+    void Start() {
+        tooltipCanvas = gameObject.GetComponentInChildren<Canvas>();
+        if (tooltipCanvas != null) {
+            tooltipCanvas.gameObject.SetActive(false);
+        }
     }
 
     void FixedUpdate() {
@@ -78,6 +86,9 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public void OnDrag(PointerEventData eventData) {
         isDragging = true;
         Debug.Log("Dragging");
+        if (tooltipCanvas != null) {
+            tooltipCanvas.gameObject.SetActive(false);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData) {
@@ -87,9 +98,15 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
     public void OnPointerEnter(PointerEventData eventData) {
         Debug.Log("Pointer Enter");
+        if (tooltipCanvas != null && !isDragging) {
+            tooltipCanvas.gameObject.SetActive(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData) {
         Debug.Log("Pointer Exit");
+        if (tooltipCanvas != null) {
+            tooltipCanvas.gameObject.SetActive(false);
+        }
     }
 }

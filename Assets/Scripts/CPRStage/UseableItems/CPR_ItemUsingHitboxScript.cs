@@ -15,18 +15,14 @@ public class CPR_ItemUsingHitboxScript : MonoBehaviour {
                         other.gameObject.GetComponent<IUseable>().UseItem();
                     }
                     else if (!other.GetComponent<DragableItem>().isDragging) {
-                        SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
-                        CPRStageCharacter.instance.OnWrongItem();
-                        ScoreManager.instance.SubtractScore();
+                        CPRStageStepManager.instance.OnStepWrong();
                     }
                 }
                 break;
             default:
                 if (other.GetComponent<DragableItem>() != null) {
                     if (!other.GetComponent<DragableItem>().isDragging) {
-                        SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
-                        CPRStageCharacter.instance.OnWrongItem();
-                        ScoreManager.instance.SubtractScore();
+                        CPRStageStepManager.instance.OnStepWrong();
                     }
                 }
                 break;

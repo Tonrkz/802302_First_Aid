@@ -3,9 +3,12 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class CPR_NoseScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
+public class CPR_MouthScript : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
     [Header("References")]
     [SerializeField] GameObject breathingPanel;
+    [SerializeField] GameObject checkForBreathingHand;
+    [SerializeField] GameObject firstLungResuscitationHand;
+    [SerializeField] GameObject secondLungResuscitationHand;
 
     [Header("Attributes")]
     [SerializeField] byte helpBreathingCount = 2;
@@ -14,6 +17,7 @@ public class CPR_NoseScript : MonoBehaviour, IPointerDownHandler, IPointerUpHand
 
     [Header("Audio")]
     [SerializeField] AudioClip correctSFX;
+    [SerializeField] AudioClip wrongItemSFX;
     [SerializeField] AudioClip heartBeatSFX;
     [SerializeField] AudioClip breathingSFX;
 
@@ -27,22 +31,58 @@ public class CPR_NoseScript : MonoBehaviour, IPointerDownHandler, IPointerUpHand
         }
     }
 
+    void OnTriggerStay2D(Collider2D other) {
+        switch (CPRStageStepManager.instance.currentStep) {
+            case Enum_CPRStageStep.CheckForBreath:
+                if (other.GetComponent<DragableItem>() != null) {
+                    if (!other.GetComponent<DragableItem>().isDragging && other.gameObject == checkForBreathingHand) {
+                        other.gameObject.GetComponent<IUseable>().UseItem();
+                    }
+                    else if (!other.GetComponent<DragableItem>().isDragging) {
+                        CPRStageStepManager.instance.OnStepWrong();
+                    }
+                }
+                break;
+            case Enum_CPRStageStep.FirstHandLungResuscitation:
+                if (other.GetComponent<DragableItem>() != null) {
+                    if (!other.GetComponent<DragableItem>().isDragging && other.gameObject == firstLungResuscitationHand) {
+                        other.gameObject.GetComponent<IUseable>().UseItem();
+                    }
+                    else if (!other.GetComponent<DragableItem>().isDragging) {
+                        CPRStageStepManager.instance.OnStepWrong();
+                    }
+                }
+                break;
+            case Enum_CPRStageStep.SecondHandLungResuscitation:
+                if (other.GetComponent<DragableItem>() != null) {
+                    if (!other.GetComponent<DragableItem>().isDragging && other.gameObject == secondLungResuscitationHand) {
+                        other.gameObject.GetComponent<IUseable>().UseItem();
+                    }
+                    else if (!other.GetComponent<DragableItem>().isDragging) {
+                        CPRStageStepManager.instance.OnStepWrong();
+                    }
+                }
+                break;
+            default:
+                if (other.GetComponent<DragableItem>() != null) {
+                    if (!other.GetComponent<DragableItem>().isDragging) {
+                        CPRStageStepManager.instance.OnStepWrong();
+                    }
+                }
+                break;
+        }
+    }
+
     public void OnPointerDown(PointerEventData eventData) {
         switch (CPRStageStepManager.instance.currentStep) {
             case Enum_CPRStageStep.CheckForBreath: // Check for breathing
                 CPRStageCharacter.instance.OnCorrectItemForEachStep();
                 GetComponent<Collider2D>().enabled = false;
                 break;
-            case Enum_CPRStageStep.CallAmbulance: // Call for ambulance
-                break;
-            case Enum_CPRStageStep.StartCPR: // Start CPR
-                break;
             case Enum_CPRStageStep.LungResuscitation: // Help Breathing
                 isMousePressed = true;
                 breathingPanel.GetComponent<Slider>().value = 0;
                 breathingPanel.SetActive(true);
-                break;
-            case Enum_CPRStageStep.End:
                 break;
             default:
                 break;
