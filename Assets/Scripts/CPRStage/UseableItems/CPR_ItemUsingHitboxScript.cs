@@ -4,9 +4,6 @@ public class CPR_ItemUsingHitboxScript : MonoBehaviour {
     [Header("References")]
     [SerializeField] GameObject phone;
 
-    [Header("Audio")]
-    [SerializeField] AudioClip wrongItemSFX;
-
     private void OnTriggerStay2D(Collider2D other) {
         switch (CPRStageStepManager.instance.currentStep) {
             case Enum_CPRStageStep.CallAmbulance: // Call for ambulance

@@ -5,10 +5,6 @@ public class CPRTrigger : MonoBehaviour, IPointerDownHandler, IPointerUpHandler 
     [Header("References")]
     [SerializeField] GameObject firstHandCPR;
 
-    [Header("Audio")]
-    [SerializeField] AudioClip correctItemSFX;
-    [SerializeField] AudioClip wrongItemSFX;
-
     [Header("Debug")]
     internal bool isTriggered = false;
 

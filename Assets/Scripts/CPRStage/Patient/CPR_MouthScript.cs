@@ -17,7 +17,6 @@ public class CPR_MouthScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     [Header("Audio")]
     [SerializeField] AudioClip correctSFX;
-    [SerializeField] AudioClip wrongItemSFX;
     [SerializeField] AudioClip heartBeatSFX;
     [SerializeField] AudioClip breathingSFX;
 
