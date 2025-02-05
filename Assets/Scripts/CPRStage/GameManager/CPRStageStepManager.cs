@@ -4,7 +4,7 @@ using UnityEngine.Rendering.Universal;
 
 public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
-    internal Enum_CPRStageStep currentStep = Enum_CPRStageStep.StepOne;
+    internal Enum_CPRStageStep currentStep = Enum_CPRStageStep.CheckForBreath;
 
     [Header("References")]
     [SerializeField] GameObject stageBackground;
@@ -28,7 +28,7 @@ public class CPRStageStepManager : MonoBehaviour {
 
     void OnInitiateStep(Enum_CPRStageStep step) {
         switch (step) {
-            case Enum_CPRStageStep.StepOne:
+            case Enum_CPRStageStep.CheckForBreath:
                 Debug.Log("Check for breathing");
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(false);
@@ -37,13 +37,13 @@ public class CPRStageStepManager : MonoBehaviour {
                     item.SetActive(true);
                 }
                 break;
-            case Enum_CPRStageStep.StepTwo:
+            case Enum_CPRStageStep.CallAmbulance:
                 Debug.Log("Call for ambulance");
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
                 break;
-            case Enum_CPRStageStep.StepThree:
+            case Enum_CPRStageStep.StartCPR:
                 Debug.Log("Start CPR");
                 UserInterfaceManager.instance.FadeTint(stageBackground, new Color(0.5f, 0.5f, 0.5f, 1f));
                 noseHitbox.SetActive(false);
@@ -54,7 +54,7 @@ public class CPRStageStepManager : MonoBehaviour {
                     item.SetActive(false);
                 }
                 break;
-            case Enum_CPRStageStep.StepFour:
+            case Enum_CPRStageStep.LungResuscitation:
                 Debug.Log("Help Breathing");
                 UserInterfaceManager.instance.FadeTint(stageBackground, Color.white);
                 noseHitbox.SetActive(true);
@@ -77,21 +77,21 @@ public class CPRStageStepManager : MonoBehaviour {
 
     internal void OnStepCompleted() {
         SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
-        if (currentStep != Enum_CPRStageStep.StepThree) {
+        if (currentStep != Enum_CPRStageStep.StartCPR) {
             ScoreManager.instance.AddScore();
         }
         switch (currentStep) {
-            case Enum_CPRStageStep.StepOne:
+            case Enum_CPRStageStep.CheckForBreath:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ตรวจสอบลมหายใจ");
                 break;
-            case Enum_CPRStageStep.StepTwo:
+            case Enum_CPRStageStep.CallAmbulance:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} โทรเรียกรถพยาบาล");
                 break;
-            case Enum_CPRStageStep.StepThree:
+            case Enum_CPRStageStep.StartCPR:
                 CPRMinigameManager.instance.EndCPRMinigame();
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"กดหน้าอกปั๊มหัวใจ");
                 break;
-            case Enum_CPRStageStep.StepFour:
+            case Enum_CPRStageStep.LungResuscitation:
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"+{ScoreManager.instance.deltaScore} ผายปอด");
                 break;
             case Enum_CPRStageStep.End:

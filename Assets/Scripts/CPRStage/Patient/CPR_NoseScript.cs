@@ -22,22 +22,22 @@ public class CPR_NoseScript : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     }
 
     void Update() {
-        if (isMousePressed && CPRStageStepManager.instance.currentStep == Enum_CPRStageStep.StepFour) {
+        if (isMousePressed && CPRStageStepManager.instance.currentStep == Enum_CPRStageStep.LungResuscitation) {
             HelpBreathing();
         }
     }
 
     public void OnPointerDown(PointerEventData eventData) {
         switch (CPRStageStepManager.instance.currentStep) {
-            case Enum_CPRStageStep.StepOne: // Check for breathing
+            case Enum_CPRStageStep.CheckForBreath: // Check for breathing
                 CPRStageCharacter.instance.OnCorrectItemForEachStep();
                 GetComponent<Collider2D>().enabled = false;
                 break;
-            case Enum_CPRStageStep.StepTwo: // Call for ambulance
+            case Enum_CPRStageStep.CallAmbulance: // Call for ambulance
                 break;
-            case Enum_CPRStageStep.StepThree: // Start CPR
+            case Enum_CPRStageStep.StartCPR: // Start CPR
                 break;
-            case Enum_CPRStageStep.StepFour: // Help Breathing
+            case Enum_CPRStageStep.LungResuscitation: // Help Breathing
                 isMousePressed = true;
                 breathingPanel.GetComponent<Slider>().value = 0;
                 breathingPanel.SetActive(true);
