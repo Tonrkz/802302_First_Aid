@@ -9,8 +9,9 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     [Header("Attributes")]
     public bool isDragging = false;
-    Vector2 originPosition;
-    float lerpSpeed = 0.1f;
+    public bool isPlayingAnimation = false;
+    public Vector2 originPosition;
+    float lerpSpeed = 0.15f;
 
     [Header("Audio")]
     [SerializeField] AudioClip clickSound;
@@ -39,10 +40,10 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     void FixedUpdate() {
-        if (isDragging) {
+        if (isDragging && !isPlayingAnimation) {
             MoveObject();
         }
-        else {
+        else if (!isPlayingAnimation){
             ResetPosition();
         }
     }
@@ -85,7 +86,6 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
 
     public void OnDrag(PointerEventData eventData) {
         isDragging = true;
-        Debug.Log("Dragging");
         if (tooltipCanvas != null) {
             tooltipCanvas.gameObject.SetActive(false);
         }

@@ -3,7 +3,6 @@ using UnityEngine;
 public class CPR_CheckForBreathingHand : MonoBehaviour, IUseable {
     [Header("Refferences")]
     [SerializeField] Animator animatorController;
-    [SerializeField] AudioClip phoneSFX;
 
     void Start() {
         animatorController = GetComponent<Animator>();
@@ -13,11 +12,12 @@ public class CPR_CheckForBreathingHand : MonoBehaviour, IUseable {
         Debug.Log("Check For Breathing Hand used!");
         //Play Animation
         animatorController.SetBool("isUsed", true);
-        //Play Sound
-        SFXManager.instance.PlaySFXClip(phoneSFX, transform, 1f);
+        GetComponent<DragableItem>().isPlayingAnimation = true;
+        gameObject.transform.position = GetComponent<DragableItem>().originPosition;
     }
 
-    public void AnimNotifyUpdateStep() {
+    public void AnimNotifyDestroyGameObject() {
         CPRStageCharacter.instance.OnCorrectItemForEachStep();
+        Destroy(gameObject);
     }
 }
