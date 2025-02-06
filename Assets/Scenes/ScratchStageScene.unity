@@ -2059,7 +2059,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!68 &470938783
 EdgeCollider2D:
@@ -2749,7 +2752,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &633788683
 MonoBehaviour:
@@ -3924,7 +3930,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &920667762
 MonoBehaviour:
@@ -4151,7 +4160,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!68 &937997044
 EdgeCollider2D:
@@ -4353,7 +4365,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -110, y: -65}
-  m_SizeDelta: {x: 450, y: 60}
+  m_SizeDelta: {x: 500, y: 60}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &973662849
 MonoBehaviour:
@@ -5378,7 +5390,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!68 &1147999014
 EdgeCollider2D:
@@ -7234,7 +7249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &1585854850
 MonoBehaviour:
@@ -7549,7 +7567,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7673,7 +7691,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &1715711761
 MonoBehaviour:
@@ -9371,7 +9392,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9615545b2b56b4b4a92aaf5caffa8f28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canDrag: 1
   isDragging: 0
+  isPlayingAnimation: 0
+  originPosition: {x: 0, y: 0}
   clickSound: {fileID: 8300000, guid: 845b96d6e351f0c44a874e6ce99fff23, type: 3}
 --- !u!114 &1927206289
 MonoBehaviour:
@@ -10348,7 +10372,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u0E14\u0E48\u0E32\u0E19\u0E17\u0E35\u0E48 1: \u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01"
+  m_text: "\u0E14\u0E48\u0E32\u0E19\u0E17\u0E35\u0E48 1: \u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01
+    (Abrasions)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
   m_sharedMaterial: {fileID: -7774512699622065192, guid: 0e4197e8dfe3a7e49a9ce5a75ca692d0, type: 2}
