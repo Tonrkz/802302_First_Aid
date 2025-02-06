@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
+using UnityEngine.XR;
 
 public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
@@ -10,7 +11,7 @@ public class CPRStageStepManager : MonoBehaviour {
     [SerializeField] GameObject stageBackground;
 
     [Header("Attributes")]
-    [SerializeField] GameObject noseHitbox;
+    [SerializeField] internal GameObject noseHitbox;
     [SerializeField] GameObject correctCPRHitbox;
     [SerializeField] GameObject itemUsingHitbox;
     [SerializeField] List<GameObject> itemList = new List<GameObject>();
@@ -25,6 +26,12 @@ public class CPRStageStepManager : MonoBehaviour {
 
     void Start() {
         OnInitiateStep(currentStep);
+    }
+
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)) {
+            OnStepCompleted();
+        }
     }
 
     void OnInitiateStep(Enum_CPRStageStep step) {
@@ -53,7 +60,7 @@ public class CPRStageStepManager : MonoBehaviour {
             case Enum_CPRStageStep.SecondHandCPR:
                 Debug.Log("Second Hand CPR");
                 noseHitbox.SetActive(false);
-                correctCPRHitbox.SetActive(true);
+                correctCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(false);
                 break;
             case Enum_CPRStageStep.StartCPR:
@@ -64,28 +71,46 @@ public class CPRStageStepManager : MonoBehaviour {
                 itemUsingHitbox.SetActive(false);
                 CPRMinigameManager.instance.InitiateCPRMinigame();
                 foreach (GameObject item in itemList) {
-                    item.SetActive(false);
+                    try {
+                        if (item.name == "First Hand CPR" || item.name == "Second Hand CPR") {
+                            Destroy(item);
+                        }
+                        item.SetActive(false);
+                    }
+                    catch (System.Exception) {
+                        continue;
+                    }
                 }
                 break;
             case Enum_CPRStageStep.FirstHandLungResuscitation:
                 Debug.Log("First Hand Lung Resuscitation");
                 UserInterfaceManager.instance.FadeTint(stageBackground, Color.white);
                 noseHitbox.SetActive(true);
+                noseHitbox.GetComponent<Collider2D>().enabled = true;
                 correctCPRHitbox.SetActive(true);
-                itemUsingHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(true);
                 foreach (GameObject item in itemList) {
-                    item.SetActive(true);
+                    try {
+                        item.SetActive(true);
+                    }
+                    catch (System.Exception) {
+                        continue;
+                    }
                 }
                 break;
             case Enum_CPRStageStep.SecondHandLungResuscitation:
                 Debug.Log("Second Hand Lung Resuscitation");
+                noseHitbox.GetComponent<Collider2D>().enabled = false;
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(true);
-                itemUsingHitbox.SetActive(false);
+                itemUsingHitbox.SetActive(true);
                 break;
             case Enum_CPRStageStep.LungResuscitation:
                 Debug.Log("Help Breathing");
+                Destroy(itemList[1]);
+                Destroy(itemList[2]);
                 noseHitbox.SetActive(true);
+                noseHitbox.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
                 noseHitbox.GetComponent<Collider2D>().enabled = true;
                 correctCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
@@ -108,7 +133,7 @@ public class CPRStageStepManager : MonoBehaviour {
 
     internal void OnStepCompleted() {
         SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
-        if (currentStep != Enum_CPRStageStep.StartCPR || currentStep != Enum_CPRStageStep.FirstHandCPR || currentStep != Enum_CPRStageStep.SecondHandCPR || currentStep != Enum_CPRStageStep.FirstHandLungResuscitation || currentStep != Enum_CPRStageStep.SecondHandLungResuscitation) {
+        if (currentStep == Enum_CPRStageStep.CheckForBreath || currentStep == Enum_CPRStageStep.CallAmbulance || currentStep == Enum_CPRStageStep.LungResuscitation) {
             ScoreManager.instance.AddScore();
         }
         switch (currentStep) {

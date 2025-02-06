@@ -8,6 +8,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     Canvas tooltipCanvas;
 
     [Header("Attributes")]
+    public bool canDrag = true;
     public bool isDragging = false;
     public bool isPlayingAnimation = false;
     public Vector2 originPosition;
@@ -85,6 +86,9 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     public void OnDrag(PointerEventData eventData) {
+        if (!canDrag) {
+            return;
+        }
         isDragging = true;
         if (tooltipCanvas != null) {
             tooltipCanvas.gameObject.SetActive(false);
@@ -92,13 +96,16 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        if (!canDrag) {
+            return;
+        }
         isDragging = false;
         StartCoroutine(ResetPositionCoroutine());
         Debug.Log("End Drag");
     }
     public void OnPointerEnter(PointerEventData eventData) {
         Debug.Log("Pointer Enter");
-        if (tooltipCanvas != null && !isDragging) {
+        if (tooltipCanvas != null && !isDragging && canDrag) {
             tooltipCanvas.gameObject.SetActive(true);
         }
     }

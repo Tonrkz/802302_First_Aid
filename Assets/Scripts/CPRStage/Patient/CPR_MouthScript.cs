@@ -110,6 +110,7 @@ public class CPR_MouthScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
                 SFXManager.instance.PlaySFXClip(correctSFX, transform, 1f);
             }
             if (helpBreathingCount == 0) {
+                CPRStageStepManager.instance.noseHitbox.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0);
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"ผายปอด");
                 SFXManager.instance.PlaySFXClip(correctSFX, transform, 1f);
                 SFXManager.instance.PlayLoopSFXClip(heartBeatSFX, transform, 0.75f, 5);

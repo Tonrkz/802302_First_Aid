@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CPR_CheckForBreathingHand : MonoBehaviour, IUseable {
+public class CPR_SecondHandCPR : MonoBehaviour, IUseable {
     [Header("References")]
     [SerializeField] Animator animatorController;
 
@@ -13,11 +13,11 @@ public class CPR_CheckForBreathingHand : MonoBehaviour, IUseable {
         //Play Animation
         animatorController.SetBool("isUsed", true);
         GetComponent<DragableItem>().isPlayingAnimation = true;
-        gameObject.transform.position = GetComponent<DragableItem>().originPosition;
+        transform.position = CPRMinigameManager.instance.hitboxCPR.GetComponentInChildren<SpriteRenderer>().gameObject.transform.position;
     }
 
     public void AnimNotifyDestroyGameObject() {
         CPRStageCharacter.instance.OnCorrectItemForEachStep();
-        Destroy(gameObject);
+        CPRMinigameManager.instance.hitboxCPR.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
     }
 }

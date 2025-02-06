@@ -10,11 +10,15 @@ public class CPRTrigger : MonoBehaviour, IPointerDownHandler, IPointerUpHandler 
 
     public void OnPointerDown(PointerEventData eventData) {
         Debug.Log("Triggered");
+        GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.75f);
+        GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(1.4f, 1.4f, 1.4f);
         isTriggered = true;
     }
 
     public void OnPointerUp(PointerEventData eventData) {
         Debug.Log("Untriggered");
+        GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+        GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(1.65f, 1.65f, 1.65f);
         isTriggered = false;
     }
 

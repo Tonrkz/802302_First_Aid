@@ -6,10 +6,10 @@ AnimatorOverrideController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: AnimCon_CheckForBreathingHand
+  m_Name: AnimCon_SecondHandCPR
   m_Controller: {fileID: 9100000, guid: 9eae2ec3eb263944f99f6ce2100551f0, type: 2}
   m_Clips:
   - m_OriginalClip: {fileID: 7400000, guid: f89371a7fef696143a4b0105ea2f5660, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: affeaca78226d524da688d7981df2e8f, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f79cb0b01dcca91459ac9c885aa8f70b, type: 2}
   - m_OriginalClip: {fileID: 7400000, guid: 7022dfebaca1b714fa3ec7c40b981040, type: 2}
-    m_OverrideClip: {fileID: 7400000, guid: 5c6262cb54519534cbf01746b501fa8b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 4ea9c59ba45e5344e9ef8c9d68c99b73, type: 2}
