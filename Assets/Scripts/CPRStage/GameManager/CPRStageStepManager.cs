@@ -14,6 +14,7 @@ public class CPRStageStepManager : MonoBehaviour {
     [SerializeField] internal GameObject noseHitbox;
     [SerializeField] GameObject correctCPRHitbox;
     [SerializeField] GameObject itemUsingHitbox;
+    [SerializeField] GameObject assistantCPR;
     [SerializeField] List<GameObject> itemList = new List<GameObject>();
 
     [Header("Audio")]
@@ -35,6 +36,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 noseHitbox.SetActive(true);
                 correctCPRHitbox.SetActive(false);
                 itemUsingHitbox.SetActive(true);
+                assistantCPR.SetActive(false);
                 foreach (GameObject item in itemList) {
                     item.SetActive(true);
                 }
@@ -50,6 +52,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
                 itemUsingHitbox.SetActive(false);
+                assistantCPR.SetActive(true);
                 break;
             case Enum_CPRStageStep.SecondHandCPR:
                 Debug.Log("Second Hand CPR");
