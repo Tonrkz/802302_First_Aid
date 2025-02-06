@@ -1,4 +1,3 @@
-using UnityEditor.ShaderGraph.Serialization;
 using UnityEngine;
 
 public class CPR_FirstLungResuscitationHand : MonoBehaviour, IUseable {

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a73e41fb7e62de43961c6ae6b7c4a60
+guid: d20245858a91b754d85054f92149fe32
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3409446891288736484
-    second: IMG_2064_0
+      213: 8086795181282612547
+    second: UI_Stage_Deco2_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: IMG_2064_0
+      name: UI_Stage_Deco2_2_0
       rect:
         serializedVersion: 2
-        x: 197
-        y: 218
-        width: 593
-        height: 600
+        x: 1
+        y: 1
+        width: 64
+        height: 105
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1dcc2ccd163fa0d0800000000000000
-      internalID: -3409446891288736484
+      spriteID: 345d0b72f511a3070800000000000000
+      internalID: 8086795181282612547
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      IMG_2064_0: -3409446891288736484
+      UI_Stage_Deco2_2_0: 8086795181282612547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
