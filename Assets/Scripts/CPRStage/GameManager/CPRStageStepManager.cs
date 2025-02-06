@@ -28,12 +28,6 @@ public class CPRStageStepManager : MonoBehaviour {
         OnInitiateStep(currentStep);
     }
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            OnStepCompleted();
-        }
-    }
-
     void OnInitiateStep(Enum_CPRStageStep step) {
         switch (step) {
             case Enum_CPRStageStep.CheckForBreath:

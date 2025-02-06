@@ -302,7 +302,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E19\u0E49\u0E33\u0E23\u0E49\u0E2D\u0E19\u0E25\u0E27\u0E01"
+            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E19\u0E49\u0E33\u0E23\u0E49\u0E2D\u0E19\u0E25\u0E27\u0E01
+              (Burned Wound)"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
@@ -2113,7 +2114,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01"
+            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01 (Abrasions)"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
@@ -2279,7 +2280,9 @@ MonoBehaviour:
   UIHeadUpDisplay: {fileID: 0}
   UIPaused: {fileID: 0}
   UIGameOver: {fileID: 0}
+  UIGameOverPanel: {fileID: 0}
   UIResult: {fileID: 0}
+  UIResultPanel: {fileID: 0}
   UIResultScoreText: {fileID: 0}
   UITutorial: {fileID: 0}
 --- !u!114 &1401022195
@@ -2297,7 +2300,6 @@ MonoBehaviour:
   titlePanel: {fileID: 796902470}
   levelSelectionPanel: {fileID: 264853368}
   screenWidth: 0
-  screenHeight: 0
   tweenDuration: 1
 --- !u!1 &1413799592
 GameObject:
@@ -2470,7 +2472,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: CPR
+            m_StringArgument: "\u0E01\u0E32\u0E23\u0E19\u0E27\u0E14\u0E2B\u0E31\u0E27\u0E43\u0E08\u0E1C\u0E32\u0E22\u0E1B\u0E2D\u0E14\u0E01\u0E39\u0E49\u0E0A\u0E35\u0E1E
+              (CPR)"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
