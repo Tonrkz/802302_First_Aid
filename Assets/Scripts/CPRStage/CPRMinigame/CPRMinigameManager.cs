@@ -3,10 +3,13 @@ using UnityEngine;
 
 public class CPRMinigameManager : MonoBehaviour {
     public static CPRMinigameManager instance;
-
+    [Header("References")]
     [SerializeField] GameObject CPRUserInterface;
     [SerializeField] GameObject beatPrefab;
     [SerializeField] GameObject spawnPoint;
+    [SerializeField] public GameObject hitboxCPR;
+
+    [Header("Debug")]
     Byte beatCount = 30;
     Byte beatCounter = 0;
     Byte beatMissed = 0;
@@ -54,11 +57,13 @@ public class CPRMinigameManager : MonoBehaviour {
     }
 
     internal void InitiateCPRMinigame() {
+        hitboxCPR.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         CPRUserInterface.SetActive(true);
         hasStarted = true;
     }
 
     internal void EndCPRMinigame() {
+        hitboxCPR.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         CPRUserInterface.SetActive(false);
         hasStarted = false;
     }
