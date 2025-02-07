@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      UI_GameOver_Darken_0: -712091922289492666
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
