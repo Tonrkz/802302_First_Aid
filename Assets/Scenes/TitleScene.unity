@@ -302,7 +302,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E19\u0E49\u0E33\u0E23\u0E49\u0E2D\u0E19\u0E25\u0E27\u0E01"
+            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E19\u0E49\u0E33\u0E23\u0E49\u0E2D\u0E19\u0E25\u0E27\u0E01
+              (Burned Wound)"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
@@ -424,8 +425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 380, y: 553}
+  m_AnchoredPosition: {x: 16, y: 230}
+  m_SizeDelta: {x: 74, y: 97}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &220934935
 MonoBehaviour:
@@ -447,7 +448,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ffa9e3c873f77ec479e4d7c66f96c35e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 54588d8e7dee4204abf4c8143853c68d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1004,8 +1005,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 385, y: 560}
+  m_AnchoredPosition: {x: -160, y: 228}
+  m_SizeDelta: {x: 65, y: 106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &601460929
 MonoBehaviour:
@@ -1027,7 +1028,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 344da1038b39941449a64717b20b0c1d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25b6b1478127adf4fb53957468d0b129, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1079,8 +1080,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 380, y: 553}
+  m_AnchoredPosition: {x: 160, y: 225}
+  m_SizeDelta: {x: 65, y: 106}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &676226930
 MonoBehaviour:
@@ -1102,7 +1103,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: cdfdd76a72903084ca1115c623e9ba7f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d20245858a91b754d85054f92149fe32, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2113,7 +2114,7 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01"
+            m_StringArgument: "\u0E41\u0E1C\u0E25\u0E16\u0E25\u0E2D\u0E01 (Abrasions)"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}
@@ -2279,7 +2280,9 @@ MonoBehaviour:
   UIHeadUpDisplay: {fileID: 0}
   UIPaused: {fileID: 0}
   UIGameOver: {fileID: 0}
+  UIGameOverPanel: {fileID: 0}
   UIResult: {fileID: 0}
+  UIResultPanel: {fileID: 0}
   UIResultScoreText: {fileID: 0}
   UITutorial: {fileID: 0}
 --- !u!114 &1401022195
@@ -2297,7 +2300,6 @@ MonoBehaviour:
   titlePanel: {fileID: 796902470}
   levelSelectionPanel: {fileID: 264853368}
   screenWidth: 0
-  screenHeight: 0
   tweenDuration: 1
 --- !u!1 &1413799592
 GameObject:
@@ -2470,7 +2472,8 @@ MonoBehaviour:
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
-            m_StringArgument: CPR
+            m_StringArgument: "\u0E01\u0E32\u0E23\u0E19\u0E27\u0E14\u0E2B\u0E31\u0E27\u0E43\u0E08\u0E1C\u0E32\u0E22\u0E1B\u0E2D\u0E14\u0E01\u0E39\u0E49\u0E0A\u0E35\u0E1E
+              (CPR)"
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1401022194}

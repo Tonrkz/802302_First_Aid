@@ -5,11 +5,14 @@ using UnityEngine.EventSystems;
 public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
     [Header("References")]
     Rigidbody2D rb;
+    Canvas tooltipCanvas;
 
     [Header("Attributes")]
+    public bool canDrag = true;
     public bool isDragging = false;
-    Vector2 originPosition;
-    float lerpSpeed = 0.1f;
+    public bool isPlayingAnimation = false;
+    public Vector2 originPosition;
+    float lerpSpeed = 0.15f;
 
     [Header("Audio")]
     [SerializeField] AudioClip clickSound;
@@ -30,11 +33,18 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         originPosition = transform.position;
     }
 
+    void Start() {
+        tooltipCanvas = gameObject.GetComponentInChildren<Canvas>();
+        if (tooltipCanvas != null) {
+            tooltipCanvas.gameObject.SetActive(false);
+        }
+    }
+
     void FixedUpdate() {
-        if (isDragging) {
+        if (isDragging && !isPlayingAnimation) {
             MoveObject();
         }
-        else {
+        else if (!isPlayingAnimation){
             ResetPosition();
         }
     }
@@ -76,20 +86,34 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     public void OnDrag(PointerEventData eventData) {
+        if (!canDrag) {
+            return;
+        }
         isDragging = true;
-        Debug.Log("Dragging");
+        if (tooltipCanvas != null) {
+            tooltipCanvas.gameObject.SetActive(false);
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData) {
+        if (!canDrag) {
+            return;
+        }
         isDragging = false;
         StartCoroutine(ResetPositionCoroutine());
         Debug.Log("End Drag");
     }
     public void OnPointerEnter(PointerEventData eventData) {
         Debug.Log("Pointer Enter");
+        if (tooltipCanvas != null && !isDragging && canDrag) {
+            tooltipCanvas.gameObject.SetActive(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData) {
         Debug.Log("Pointer Exit");
+        if (tooltipCanvas != null) {
+            tooltipCanvas.gameObject.SetActive(false);
+        }
     }
 }

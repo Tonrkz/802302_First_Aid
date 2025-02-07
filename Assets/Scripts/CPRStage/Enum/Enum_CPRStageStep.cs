@@ -1,7 +1,11 @@
 public enum Enum_CPRStageStep {
-    StepOne, // Check for breathing
-    StepTwo, // Call for ambulance
-    StepThree, // Start CPR
-    StepFour, // Help Breathing
+    CheckForBreath, // Step 1
+    CallAmbulance, // Step 2
+    FirstHandCPR,
+    SecondHandCPR,
+    StartCPR, // Step 3
+    FirstHandLungResuscitation,
+    SecondHandLungResuscitation,
+    LungResuscitation, // Step 4
     End
 }
