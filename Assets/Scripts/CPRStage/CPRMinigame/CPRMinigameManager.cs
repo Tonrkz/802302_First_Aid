@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using DG.Tweening;
 
 public class CPRMinigameManager : MonoBehaviour {
     public static CPRMinigameManager instance;
@@ -8,6 +9,10 @@ public class CPRMinigameManager : MonoBehaviour {
     [SerializeField] GameObject beatPrefab;
     [SerializeField] GameObject spawnPoint;
     [SerializeField] public GameObject hitboxCPR;
+
+    [Header("Audios")]
+    [SerializeField] AudioClip heartBeatSFX;
+    AudioSource hearBeat;
 
     [Header("Debug")]
     Byte beatCount = 30;
@@ -60,11 +65,15 @@ public class CPRMinigameManager : MonoBehaviour {
         hitboxCPR.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 1);
         CPRUserInterface.SetActive(true);
         hasStarted = true;
+        hearBeat = SFXManager.instance.PlaySFXClip(heartBeatSFX, gameObject.transform, 1f, false);
+        DG.Tweening.DOTweenModuleAudio.DOFade(BGMManager.instance.BGMObject, 0.05f, 0.5f);
     }
 
     internal void EndCPRMinigame() {
         hitboxCPR.GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0);
         CPRUserInterface.SetActive(false);
         hasStarted = false;
+        DG.Tweening.DOTweenModuleAudio.DOFade(BGMManager.instance.BGMObject, 0.125f, 0.5f);
+        Destroy(hearBeat);
     }
 }

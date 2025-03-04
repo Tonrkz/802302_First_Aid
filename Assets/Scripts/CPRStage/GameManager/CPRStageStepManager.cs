@@ -72,7 +72,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 CPRMinigameManager.instance.InitiateCPRMinigame();
                 foreach (GameObject item in itemList) {
                     try {
-                        if (item.name == "First Hand CPR" || item.name == "Second Hand CPR") {
+                        if (item.GetComponent<CPR_FirstHandCPR>() != null || item.GetComponent<CPR_SecondHandCPR>() != null) {
                             Destroy(item);
                         }
                         item.SetActive(false);

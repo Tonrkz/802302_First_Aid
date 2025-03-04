@@ -14,7 +14,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public bool isDragging = false;
     public bool isPlayingAnimation = false;
     public Vector2 originPosition;
-    float lerpSpeed = 0.15f;
+    float lerpSpeed = 0.2f;
 
     [Header("Audio")]
     [SerializeField] AudioClip clickSound;
@@ -88,7 +88,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     }
 
     void ResetPosition() {
-        transform.position = Vector2.Lerp(transform.position, originPosition, lerpSpeed);
+        transform.position = Vector2.Lerp(transform.position, originPosition, 0.15f);
         if (Vector2.Distance(transform.position, originPosition) < 0.1f) {
             GetComponent<Collider2D>().enabled = true;
         }
