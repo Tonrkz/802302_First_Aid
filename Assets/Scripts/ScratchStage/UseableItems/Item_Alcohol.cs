@@ -11,11 +11,12 @@ public class Item_Alcohol : MonoBehaviour, IUseable {
     public void UseItem() {
         Debug.Log("UseItem");
         animatorController.SetBool("isUsed", true);
-        GetComponent<DragableItem>().isPlayingAnimation = true;
+        ScratchStageStepManager.instance.OnUsedItem.Invoke();
         gameObject.transform.position = GetComponent<DragableItem>().originPosition;
     }
 
     public void AnimNotifyDestroyGameObject() {
+        ScratchStageStepManager.instance.OnFinishedUsedItem.Invoke();
         Destroy(gameObject);
     }
 }

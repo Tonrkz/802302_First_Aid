@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.XR;
+using UnityEngine.Events;
 
 public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
@@ -9,6 +8,10 @@ public class CPRStageStepManager : MonoBehaviour {
 
     [Header("References")]
     [SerializeField] GameObject stageBackground;
+
+    [Header("Events")]
+    public UnityEvent OnUsedItem;
+    public UnityEvent OnFinishedUsedItem;
 
     [Header("Attributes")]
     [SerializeField] internal GameObject noseHitbox;
@@ -132,6 +135,9 @@ public class CPRStageStepManager : MonoBehaviour {
         SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
         if (currentStep == Enum_CPRStageStep.CheckForBreath || currentStep == Enum_CPRStageStep.CallAmbulance || currentStep == Enum_CPRStageStep.LungResuscitation) {
             ScoreManager.instance.AddScore();
+        }
+        if (currentStep != Enum_CPRStageStep.FirstHandCPR || currentStep != Enum_CPRStageStep.FirstHandLungResuscitation) {
+            OnFinishedUsedItem.Invoke();
         }
         switch (currentStep) {
             case Enum_CPRStageStep.CheckForBreath:

@@ -11,9 +11,12 @@ public class CleanCloth : MonoBehaviour, IUseable {
     public void UseItem() {
         Debug.Log("Cloth Used");
         animatorController.SetBool("isUsed", true);
+        BurnStageStepManager.instance.OnUsedItem.Invoke();
+        gameObject.transform.position = GetComponent<DragableItem>().originPosition;
     }
 
     public void AnimNotifyDestroyGameObject() {
+        BurnStageStepManager.instance.OnFinishedUsedItem.Invoke();
         Destroy(gameObject);
     }
 }

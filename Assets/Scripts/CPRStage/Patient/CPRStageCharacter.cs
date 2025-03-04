@@ -44,8 +44,8 @@ public class CPRStageCharacter : MonoBehaviour {
 
     IEnumerator UpdateAnimLayer(byte currentLayer) {
         yield return new WaitUntil(() => animatorController.GetCurrentAnimatorStateInfo(0).normalizedTime > 0 && animatorController.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
-            animatorController.SetLayerWeight(currentLayer, 0);
-            animatorController.SetLayerWeight(currentLayer + 1, 1);
+        animatorController.SetLayerWeight(currentLayer, 0);
+        animatorController.SetLayerWeight(currentLayer + 1, 1);
 
     }
 }
