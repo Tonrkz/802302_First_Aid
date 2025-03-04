@@ -1,9 +1,13 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 public class ScratchStageStepManager : MonoBehaviour
 {
     public static ScratchStageStepManager instance;
     internal Enum_ScratchStageStep thisScratchStageStep = Enum_ScratchStageStep.StepOne;
+
+    public UnityEvent OnUsedItem;
+    public UnityEvent OnFinishedUsedItem;
 
     void Awake()
     {
