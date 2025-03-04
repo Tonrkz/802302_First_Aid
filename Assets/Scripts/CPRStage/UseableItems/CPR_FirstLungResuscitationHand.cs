@@ -24,12 +24,14 @@ public class CPR_FirstLungResuscitationHand : MonoBehaviour, IUseable {
     }
 
     private void OnTriggerStay2D(Collider2D collision) {
-        if (collision.GetComponent<DragableItem>() != null && collision.gameObject == secondHand) {
-            collision.GetComponent<IUseable>().UseItem();
-        }
-        else if (collision.GetComponent<DragableItem>() != null) {
-            if (!collision.GetComponent<DragableItem>().isDragging) {
-                CPRStageStepManager.instance.OnStepWrong();
+        if (CPRStageStepManager.instance.currentStep == Enum_CPRStageStep.SecondHandLungResuscitation) {
+            if (collision.GetComponent<DragableItem>() != null && collision.gameObject == secondHand) {
+                collision.GetComponent<IUseable>().UseItem();
+            }
+            else if (collision.GetComponent<DragableItem>() != null) {
+                if (!collision.GetComponent<DragableItem>().isDragging) {
+                    CPRStageStepManager.instance.OnStepWrong();
+                }
             }
         }
     }
