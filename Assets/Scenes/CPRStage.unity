@@ -686,8 +686,8 @@ MonoBehaviour:
   helpBreathingCount: 2
   isMousePressed: 0
   correctSFX: {fileID: 8300000, guid: 0c4f31d6f77acf6489aa6d99b6aa45b5, type: 3}
-  heartBeatSFX: {fileID: 8300000, guid: 0ea8d6f7408e888499029c570512d4b6, type: 3}
-  breathingSFX: {fileID: 8300000, guid: 21b63fbc8745c9f41adc8742413e2179, type: 3}
+  heartBeatSFX: {fileID: 8300000, guid: 21b63fbc8745c9f41adc8742413e2179, type: 3}
+  breathingSFX: {fileID: 8300000, guid: 0ea8d6f7408e888499029c570512d4b6, type: 3}
 --- !u!61 &61939908
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4827,7 +4827,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trigger: {fileID: 1243023634}
-  heartBeatSFX: {fileID: 8300000, guid: 21b63fbc8745c9f41adc8742413e2179, type: 3}
 --- !u!212 &710036831
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6984,6 +6983,7 @@ MonoBehaviour:
   beatPrefab: {fileID: 6998105085978167307, guid: 2e514457e8b3d304c9357d9f4c8b3a4b, type: 3}
   spawnPoint: {fileID: 1985276835}
   hitboxCPR: {fileID: 1243023634}
+  heartBeatSFX: {fileID: 8300000, guid: b6fa19bc88726854f837be097cf456e1, type: 3}
 --- !u!1 &963885857
 GameObject:
   m_ObjectHideFlags: 0

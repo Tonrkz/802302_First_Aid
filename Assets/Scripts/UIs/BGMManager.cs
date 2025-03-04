@@ -4,7 +4,7 @@ public class BGMManager : MonoBehaviour {
     public static BGMManager instance;
 
     [Header("References")]
-    [SerializeField] AudioSource BGMObject;
+    [SerializeField] public AudioSource BGMObject;
 
     [Header("Audio")]
     [SerializeField] internal AudioClip mainMenuBGM;
