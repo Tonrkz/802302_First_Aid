@@ -74,10 +74,10 @@ public class CPR_MouthScript : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     public void OnPointerDown(PointerEventData eventData) {
         switch (CPRStageStepManager.instance.currentStep) {
-            case Enum_CPRStageStep.CheckForBreath: // Check for breathing
-                CPRStageCharacter.instance.OnCorrectItemForEachStep();
-                GetComponent<Collider2D>().enabled = false;
-                break;
+            //    case Enum_CPRStageStep.CheckForBreath: // Check for breathing
+            //        CPRStageCharacter.instance.OnCorrectItemForEachStep();
+            //        GetComponent<Collider2D>().enabled = false;
+            //        break;
             case Enum_CPRStageStep.LungResuscitation: // Help Breathing
                 isMousePressed = true;
                 breathingPanel.GetComponent<Slider>().value = 0;
