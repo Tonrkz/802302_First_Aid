@@ -1,5 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class TitleUserInterfaceManager : MonoBehaviour {
 
@@ -16,16 +17,16 @@ public class TitleUserInterfaceManager : MonoBehaviour {
         screenWidth = (int)(screenWidth * 1080f / Screen.height);
 
         titlePanel.anchoredPosition = new Vector2(0, 0);
-        levelSelectionPanel.anchoredPosition = new Vector2(screenWidth, 0);
+        levelSelectionPanel.anchoredPosition = new Vector2(screenWidth + (screenWidth >> 2), 0);
     }
 
     public void OnClickLevelSelectionButton() {
-        titlePanel.DOAnchorPos(new Vector2(-screenWidth, 0), tweenDuration);
+        titlePanel.DOAnchorPos(new Vector2(-(screenWidth + (screenWidth >> 2)), 0), tweenDuration);
         levelSelectionPanel.DOAnchorPos(new Vector2(0, 0), tweenDuration);
     }
 
     public void OnClickMainMenuButton() {
         titlePanel.DOAnchorPos(new Vector2(0, 0), tweenDuration);
-        levelSelectionPanel.DOAnchorPos(new Vector2(screenWidth, 0), tweenDuration);
+        levelSelectionPanel.DOAnchorPos(new Vector2((screenWidth + (screenWidth >> 2)), 0), tweenDuration);
     }
 }
