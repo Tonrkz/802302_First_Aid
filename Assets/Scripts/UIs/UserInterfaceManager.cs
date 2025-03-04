@@ -28,14 +28,14 @@ public class UserInterfaceManager : MonoBehaviour {
     }
 
     public void UpdateText(TextMeshProUGUI UITextObject, string message) {
-        StopCoroutine("FadeOutText");
-        //reset alpha
-        UITextObject.DOKill(true);
-        UITextObject.DOFade(1, 0);
+        //StopCoroutine("FadeOutText");
+        ////reset alpha
+        //UITextObject.DOKill(true);
+        //UITextObject.DOFade(1, 0);
         UITextObject.text = message;
-        if (UITextObject == updateScoreText) {
-            StartCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
-        }
+        //if (UITextObject == updateScoreText) {
+        //    StartCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
+        //}
     }
 
     IEnumerator FadeOutText(TextMeshProUGUI UITextObject, float showTime, float fadeTime) {
