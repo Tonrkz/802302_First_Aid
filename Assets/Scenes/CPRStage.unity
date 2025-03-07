@@ -733,7 +733,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2, y: 1.4796752}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &80916995
 GameObject:
@@ -6276,7 +6276,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.29803923}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.4}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -6863,6 +6863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 918358558}
   - component: {fileID: 918358559}
+  - component: {fileID: 918358560}
   m_Layer: 0
   m_Name: Image_BigHeart
   m_TagString: Untagged
@@ -6881,7 +6882,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.3925385, y: 0.009374991, z: 0}
   m_LocalScale: {x: 0.021757381, y: 0.08838936, z: 0.28284594}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 863877368}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6940,6 +6941,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &918358560
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 918358557}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dcd7aba7e21d4964dacb0c9c7c920367, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &945440007
 GameObject:
   m_ObjectHideFlags: 0
@@ -7198,6 +7221,7 @@ MonoBehaviour:
   beatPrefab: {fileID: 6998105085978167307, guid: 2e514457e8b3d304c9357d9f4c8b3a4b, type: 3}
   spawnPoint: {fileID: 1985276835}
   hitboxCPR: {fileID: 1243023634}
+  CPRheart: {fileID: 918358560}
   heartBeatSFX: {fileID: 8300000, guid: b6fa19bc88726854f837be097cf456e1, type: 3}
 --- !u!1 &963885857
 GameObject:

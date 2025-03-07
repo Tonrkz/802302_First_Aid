@@ -133,7 +133,9 @@ public class CPRStageStepManager : MonoBehaviour {
         SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
         CPRStageCharacter.instance.OnWrongItem();
         ScoreManager.instance.SubtractScore();
-        StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        if (ScoreManager.instance.score > 0) {
+            StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        }
     }
 
     internal void OnStepCompleted() {

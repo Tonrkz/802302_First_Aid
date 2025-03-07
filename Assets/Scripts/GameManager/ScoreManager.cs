@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
@@ -68,6 +69,7 @@ public class ScoreManager : MonoBehaviour {
     }
 
     public void GameOver() {
+        wrongStepHUD.SetActive(false);
         BGMManager.instance.PlayBGMClip(BGMManager.instance.stageFailedBGM);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIGameOver);
@@ -82,10 +84,11 @@ public class ScoreManager : MonoBehaviour {
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{score}");
     }
 
-    public IEnumerator ShowWrongStepHUD() {
+    public IEnumerator ShowWrongStepHUD(string animation = "Anim_WrongStepHUD") {
         wrongStepHUD.SetActive(true);
-        wrongStepHUD.GetComponent<Animator>().Play("Anim_WrongStepHUD");
-        yield return new WaitForSeconds(2f);
+        wrongStepHUD.GetComponent<Animator>().CrossFade(animation, 0f);
+        yield return new WaitForSeconds(wrongStepHUD.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        wrongStepHUD.GetComponent<Animator>().CrossFade("Anim_Empty_Idle", 0f);
         wrongStepHUD.SetActive(false);
     }
 }

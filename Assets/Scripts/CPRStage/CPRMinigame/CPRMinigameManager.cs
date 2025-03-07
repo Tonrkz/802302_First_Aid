@@ -9,6 +9,7 @@ public class CPRMinigameManager : MonoBehaviour {
     [SerializeField] GameObject beatPrefab;
     [SerializeField] GameObject spawnPoint;
     [SerializeField] public GameObject hitboxCPR;
+    [SerializeField] public Animator CPRheart;
 
     [Header("Audios")]
     [SerializeField] AudioClip heartBeatSFX;
@@ -17,9 +18,9 @@ public class CPRMinigameManager : MonoBehaviour {
     [Header("Debug")]
     Byte beatCount = 30;
     Byte beatCounter = 0;
-    Byte beatMissed = 0;
+    internal Byte beatMissed = 0;
     internal Byte beatTriggered = 0;
-    float tempo = 120;
+    float tempo = 125;
     float timeTreashold = 0;
     float beatTimer = 0;
     bool hasStarted = false;
