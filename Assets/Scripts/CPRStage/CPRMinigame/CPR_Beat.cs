@@ -20,6 +20,7 @@ public class CPR_Beat : MonoBehaviour {
         Debug.Log("Perfect");
         ScoreManager.instance.PerfectBeat();
         CPRMinigameManager.instance.beatTriggered++;
+        CPRMinigameManager.instance.CPRheart.SetTrigger("Hit");
         Destroy(gameObject);
     }
 
@@ -28,6 +29,7 @@ public class CPR_Beat : MonoBehaviour {
         Debug.Log("Good");
         ScoreManager.instance.GoodBeat();
         CPRMinigameManager.instance.beatTriggered++;
+        CPRMinigameManager.instance.CPRheart.SetTrigger("Hit");
         Destroy(gameObject);
     }
 
@@ -35,6 +37,9 @@ public class CPR_Beat : MonoBehaviour {
         Debug.Log("Missed");
         CPRMinigameManager.instance.MissedBeat();
         ScoreManager.instance.MissedBeat();
+        if (ScoreManager.instance.score > 0 && CPRMinigameManager.instance.beatMissed < 7) {
+            StartCoroutine(ScoreManager.instance.ShowWrongStepHUD("Anim_WrongStepHUD_Short"));
+        }
         Destroy(gameObject);
     }
 }

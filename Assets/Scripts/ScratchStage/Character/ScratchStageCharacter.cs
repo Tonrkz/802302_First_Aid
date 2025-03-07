@@ -15,7 +15,9 @@ public class ScratchStageCharacter : MonoBehaviour {
 
     public void OnWrongItem() {
         animatorController.SetTrigger("isWrong");
-        StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        if (ScoreManager.instance.score > 0) {
+            StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        }
     }
 
     public void AnimNotifyUpdateStep() {

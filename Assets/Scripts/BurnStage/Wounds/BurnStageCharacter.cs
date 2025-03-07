@@ -15,7 +15,9 @@ public class BurnStageCharacter : MonoBehaviour {
 
     public void OnWrongItem() {
         animatorController.SetTrigger("isWrong");
-        StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        if (ScoreManager.instance.score > 0) {
+            StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        }
     }
 
     public void AnimNotifyUpdateStep() {
@@ -26,8 +28,8 @@ public class BurnStageCharacter : MonoBehaviour {
 
     IEnumerator UpdateAnimLayer(byte currentLayer) {
         yield return new WaitUntil(() => animatorController.GetCurrentAnimatorStateInfo(0).normalizedTime > 0 && animatorController.GetCurrentAnimatorStateInfo(0).IsName("Idle"));
-            animatorController.SetLayerWeight(currentLayer, 0);
-            animatorController.SetLayerWeight(currentLayer + 1, 1);
-        
+        animatorController.SetLayerWeight(currentLayer, 0);
+        animatorController.SetLayerWeight(currentLayer + 1, 1);
+
     }
 }
