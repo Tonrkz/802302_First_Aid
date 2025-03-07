@@ -5981,7 +5981,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animatorController: {fileID: 0}
-  wrongStepHUD: {fileID: 0}
 --- !u!95 &985188857
 Animator:
   serializedVersion: 7
@@ -9676,7 +9675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f0f7ebc9131675641a5146856a085ce4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wrongStepHUD: {fileID: 1723127637}
   OnUsedItem:
     m_PersistentCalls:
       m_Calls: []
@@ -9710,6 +9708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982347d3939633c469398a5341071eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrongStepHUD: {fileID: 1723127637}
   score: 10
   deltaScore: 0
 --- !u!1 &1660150221

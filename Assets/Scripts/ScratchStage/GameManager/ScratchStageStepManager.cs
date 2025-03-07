@@ -7,9 +7,6 @@ public class ScratchStageStepManager : MonoBehaviour
     public static ScratchStageStepManager instance;
     internal Enum_ScratchStageStep thisScratchStageStep = Enum_ScratchStageStep.StepOne;
 
-    [Header("References")]
-    [SerializeField] GameObject wrongStepHUD;
-
     public UnityEvent OnUsedItem;
     public UnityEvent OnFinishedUsedItem;
 
@@ -49,12 +46,5 @@ public class ScratchStageStepManager : MonoBehaviour
         {
             ScoreManager.instance.StageCleared();
         }
-    }
-
-    public IEnumerator ShowWrongStepHUD() {
-        wrongStepHUD.SetActive(true);
-        wrongStepHUD.GetComponent<Animator>().Play("Anim_WrongStepHUD");
-        yield return new WaitForSeconds(1f);
-        wrongStepHUD.SetActive(false);
     }
 }

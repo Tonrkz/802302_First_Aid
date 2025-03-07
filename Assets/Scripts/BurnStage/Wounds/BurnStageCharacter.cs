@@ -4,7 +4,6 @@ using UnityEngine;
 public class BurnStageCharacter : MonoBehaviour {
     [Header("References")]
     [SerializeField] Animator animatorController;
-    [SerializeField] GameObject wrongStepHUD;
 
     void Start() {
         animatorController = GetComponent<Animator>();
@@ -16,7 +15,7 @@ public class BurnStageCharacter : MonoBehaviour {
 
     public void OnWrongItem() {
         animatorController.SetTrigger("isWrong");
-        StartCoroutine(BurnStageStepManager.instance.ShowWrongStepHUD());
+        StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
     }
 
     public void AnimNotifyUpdateStep() {
