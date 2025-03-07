@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using DG.Tweening;
+using System.Collections;
 
 public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
@@ -8,6 +10,7 @@ public class CPRStageStepManager : MonoBehaviour {
 
     [Header("References")]
     [SerializeField] GameObject stageBackground;
+    [SerializeField] GameObject wrongStepHUD;
 
     [Header("Events")]
     public UnityEvent OnUsedItem;
@@ -129,6 +132,14 @@ public class CPRStageStepManager : MonoBehaviour {
         SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
         CPRStageCharacter.instance.OnWrongItem();
         ScoreManager.instance.SubtractScore();
+        StartCoroutine(ShowWrongStepHUD());
+
+        IEnumerator ShowWrongStepHUD() {
+            wrongStepHUD.SetActive(true);
+            wrongStepHUD.GetComponent<Animator>().Play("Anim_WrongStepHUD");
+            yield return new WaitForSeconds(1f);
+            wrongStepHUD.SetActive(false); 
+        }
     }
 
     internal void OnStepCompleted() {

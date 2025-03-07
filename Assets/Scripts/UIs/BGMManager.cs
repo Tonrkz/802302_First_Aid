@@ -42,7 +42,7 @@ public class BGMManager : MonoBehaviour {
         sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
         switch (sceneName) {
-            case "MainMenu":
+            case "TitleScene":
                 PlayBGMClip(mainMenuBGM);
                 break;
             case "BurnStage":
