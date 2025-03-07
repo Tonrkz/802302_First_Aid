@@ -33,6 +33,7 @@ public class CPRStageStepManager : MonoBehaviour {
 
     void Start() {
         OnInitiateStep(currentStep);
+        ResetCamera();
     }
 
     void OnInitiateStep(Enum_CPRStageStep step) {
@@ -68,6 +69,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StartCPR:
                 Debug.Log("Start CPR");
+                SetCPRCamera();
                 UserInterfaceManager.instance.FadeTint(stageBackground, new Color(0.5f, 0.5f, 0.5f, 1f));
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
@@ -165,6 +167,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StartCPR:
                 CPRMinigameManager.instance.EndCPRMinigame();
+                ResetCamera();
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"กดหน้าอกปั๊มหัวใจ");
                 break;
             case Enum_CPRStageStep.FirstHandLungResuscitation:
@@ -184,5 +187,15 @@ public class CPRStageStepManager : MonoBehaviour {
         ++currentStep;
         Debug.Log($"Step Updated!\nCurrent Step: {currentStep}");
         OnInitiateStep(currentStep);
+    }
+
+    void ResetCamera() {
+        Camera.main.transform.DOMove(new Vector3(0, 0, -10), 0.75f);
+        Camera.main.DOOrthoSize(5.4f, 1f);
+    }
+
+    void SetCPRCamera() {
+        Camera.main.transform.DOMove(new Vector3(0, -2.3f, -10), 0.5f);
+        Camera.main.DOOrthoSize(3f, 0.5f);
     }
 }
