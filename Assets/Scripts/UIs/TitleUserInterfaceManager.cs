@@ -16,8 +16,16 @@ public class TitleUserInterfaceManager : MonoBehaviour {
         screenWidth = Screen.width;
         screenWidth = (int)(screenWidth * 1080f / Screen.height);
 
-        titlePanel.anchoredPosition = new Vector2(0, 0);
-        levelSelectionPanel.anchoredPosition = new Vector2(screenWidth + (screenWidth >> 2), 0);
+        if (PlayerPrefs.GetInt("BackToLevelSelection") == 1) {
+            titlePanel.anchoredPosition = new Vector2(-(screenWidth + (screenWidth >> 2)), 0);
+            levelSelectionPanel.anchoredPosition = new Vector2(0, 0);
+            PlayerPrefs.SetInt("BackToLevelSelection", 0);
+        }
+        else {
+            titlePanel.anchoredPosition = new Vector2(0, 0);
+            levelSelectionPanel.anchoredPosition = new Vector2(screenWidth + (screenWidth >> 2), 0);
+
+        }
     }
 
     public void OnClickLevelSelectionButton() {

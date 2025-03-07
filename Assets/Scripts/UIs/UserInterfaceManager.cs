@@ -3,6 +3,7 @@ using TMPro;
 using System.Collections;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public class UserInterfaceManager : MonoBehaviour {
     public static UserInterfaceManager instance;
@@ -20,7 +21,6 @@ public class UserInterfaceManager : MonoBehaviour {
     [SerializeField] internal GameObject UITutorial;
 
     [Header("Attributes")]
-    float showTime = 1f;
     float fadeTime = 1.5f;
 
     void Awake() {
@@ -36,11 +36,6 @@ public class UserInterfaceManager : MonoBehaviour {
         //if (UITextObject == updateScoreText) {
         //    StartCoroutine(FadeOutText(UITextObject, showTime, fadeTime));
         //}
-    }
-
-    IEnumerator FadeOutText(TextMeshProUGUI UITextObject, float showTime, float fadeTime) {
-        yield return new WaitForSeconds(showTime);
-        UITextObject.DOFade(0, fadeTime);
     }
 
     public void PlaySFXOnUI(AudioClip audioClip) {
@@ -68,7 +63,13 @@ public class UserInterfaceManager : MonoBehaviour {
     }
 
     public void LoadSceneViaName(string sceneName) {
-        SceneManager.LoadScene(sceneName);
+        if (sceneName == "TitleScene") {
+            PlayerPrefs.SetInt("BackToLevelSelection", 1);
+            SceneManager.LoadScene(sceneName);
+        }
+        else {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
     public void LoadSceneViaIndex(int sceneIndex) {
