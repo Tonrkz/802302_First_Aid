@@ -1,9 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class BurnStageStepManager : MonoBehaviour {
     public static BurnStageStepManager instance;
     internal Enum_BurnStageStep currentStep = Enum_BurnStageStep.StepOne;
+
+    [Header("References")]
+    [SerializeField] GameObject wrongStepHUD;
 
     public UnityEvent OnUsedItem;
     public UnityEvent OnFinishedUsedItem;
@@ -35,5 +39,12 @@ public class BurnStageStepManager : MonoBehaviour {
         if (currentStep == Enum_BurnStageStep.EndStage) {
             ScoreManager.instance.StageCleared();
         }
+    }
+
+    public IEnumerator ShowWrongStepHUD() {
+        wrongStepHUD.SetActive(true);
+        wrongStepHUD.GetComponent<Animator>().Play("Anim_WrongStepHUD");
+        yield return new WaitForSeconds(1f);
+        wrongStepHUD.SetActive(false);
     }
 }
