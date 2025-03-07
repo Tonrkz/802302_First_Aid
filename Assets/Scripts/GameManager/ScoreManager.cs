@@ -88,7 +88,6 @@ public class ScoreManager : MonoBehaviour {
         wrongStepHUD.SetActive(true);
         wrongStepHUD.GetComponent<Animator>().CrossFade(animation, 0f);
         yield return new WaitForSeconds(wrongStepHUD.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-        wrongStepHUD.GetComponent<Animator>().CrossFade("Anim_Empty_Idle", 0f);
         wrongStepHUD.SetActive(false);
     }
 }
