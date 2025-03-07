@@ -1,8 +1,11 @@
-﻿using System;
+﻿using System.Collections;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
     public static ScoreManager instance;
+
+    [Header("References")]
+    [SerializeField] GameObject wrongStepHUD;
 
     [Header("Attributes")]
     int scorePerStep = 5;
@@ -77,5 +80,12 @@ public class ScoreManager : MonoBehaviour {
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
         UserInterfaceManager.instance.FadeinUI(UserInterfaceManager.instance.UIResultPanel);
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{score}");
+    }
+
+    public IEnumerator ShowWrongStepHUD() {
+        wrongStepHUD.SetActive(true);
+        wrongStepHUD.GetComponent<Animator>().Play("Anim_WrongStepHUD");
+        yield return new WaitForSeconds(2f);
+        wrongStepHUD.SetActive(false);
     }
 }

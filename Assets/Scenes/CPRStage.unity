@@ -7130,6 +7130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982347d3939633c469398a5341071eca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrongStepHUD: {fileID: 1032880283}
   score: 10
   deltaScore: 0
 --- !u!4 &961116849
@@ -7160,7 +7161,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageBackground: {fileID: 1527666154}
-  wrongStepHUD: {fileID: 1032880283}
   OnUsedItem:
     m_PersistentCalls:
       m_Calls: []
