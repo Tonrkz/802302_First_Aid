@@ -17,6 +17,7 @@ public class CPR_Cellphone : MonoBehaviour, IUseable {
         gameObject.transform.position = GetComponent<DragableItem>().originPosition;
         //Play Sound
         SFXManager.instance.PlaySFXClip(phoneSFX, transform, 1f);
+        CPRStageStepManager.instance.OnUsedItem.Invoke();
     }
 
     public void AnimNotifyDestroyGameObject() {

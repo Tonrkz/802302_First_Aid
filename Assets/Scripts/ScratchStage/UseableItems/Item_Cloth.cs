@@ -14,10 +14,13 @@ public class Item_Cloth : MonoBehaviour, IUseable
     {
         Debug.Log("UseItem");
         animatorController.SetBool("isUsed", true);
+        ScratchStageStepManager.instance.OnUsedItem.Invoke();
+        gameObject.transform.position = GetComponent<DragableItem>().originPosition;
     }
 
     public void AnimNotifyDestroyGameObject()
     {
+        ScratchStageStepManager.instance.OnFinishedUsedItem.Invoke();
         Destroy(gameObject);
     }
 }

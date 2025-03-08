@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
-using UnityEngine.XR;
+using UnityEngine.Events;
+using DG.Tweening;
+using System.Collections;
 
 public class CPRStageStepManager : MonoBehaviour {
     public static CPRStageStepManager instance;
@@ -9,6 +10,10 @@ public class CPRStageStepManager : MonoBehaviour {
 
     [Header("References")]
     [SerializeField] GameObject stageBackground;
+
+    [Header("Events")]
+    public UnityEvent OnUsedItem;
+    public UnityEvent OnFinishedUsedItem;
 
     [Header("Attributes")]
     [SerializeField] internal GameObject noseHitbox;
@@ -27,6 +32,7 @@ public class CPRStageStepManager : MonoBehaviour {
 
     void Start() {
         OnInitiateStep(currentStep);
+        ResetCamera();
     }
 
     void OnInitiateStep(Enum_CPRStageStep step) {
@@ -62,6 +68,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StartCPR:
                 Debug.Log("Start CPR");
+                SetCPRCamera();
                 UserInterfaceManager.instance.FadeTint(stageBackground, new Color(0.5f, 0.5f, 0.5f, 1f));
                 noseHitbox.SetActive(false);
                 correctCPRHitbox.SetActive(true);
@@ -69,7 +76,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 CPRMinigameManager.instance.InitiateCPRMinigame();
                 foreach (GameObject item in itemList) {
                     try {
-                        if (item.name == "First Hand CPR" || item.name == "Second Hand CPR") {
+                        if (item.GetComponent<CPR_FirstHandCPR>() != null || item.GetComponent<CPR_SecondHandCPR>() != null) {
                             Destroy(item);
                         }
                         item.SetActive(false);
@@ -126,12 +133,18 @@ public class CPRStageStepManager : MonoBehaviour {
         SFXManager.instance.PlaySFXClip(wrongItemSFX, transform, 1f);
         CPRStageCharacter.instance.OnWrongItem();
         ScoreManager.instance.SubtractScore();
+        if (ScoreManager.instance.score > 0) {
+            StartCoroutine(ScoreManager.instance.ShowWrongStepHUD());
+        }
     }
 
     internal void OnStepCompleted() {
         SFXManager.instance.PlaySFXClip(correctItemSFX, transform, 1f);
         if (currentStep == Enum_CPRStageStep.CheckForBreath || currentStep == Enum_CPRStageStep.CallAmbulance || currentStep == Enum_CPRStageStep.LungResuscitation) {
             ScoreManager.instance.AddScore();
+        }
+        if (currentStep != Enum_CPRStageStep.FirstHandCPR || currentStep != Enum_CPRStageStep.FirstHandLungResuscitation) {
+            OnFinishedUsedItem.Invoke();
         }
         switch (currentStep) {
             case Enum_CPRStageStep.CheckForBreath:
@@ -148,6 +161,7 @@ public class CPRStageStepManager : MonoBehaviour {
                 break;
             case Enum_CPRStageStep.StartCPR:
                 CPRMinigameManager.instance.EndCPRMinigame();
+                ResetCamera();
                 UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.updateScoreText, $"กดหน้าอกปั๊มหัวใจ");
                 break;
             case Enum_CPRStageStep.FirstHandLungResuscitation:
@@ -167,5 +181,15 @@ public class CPRStageStepManager : MonoBehaviour {
         ++currentStep;
         Debug.Log($"Step Updated!\nCurrent Step: {currentStep}");
         OnInitiateStep(currentStep);
+    }
+
+    void ResetCamera() {
+        Camera.main.transform.DOMove(new Vector3(0, 0, -10), 0.75f);
+        Camera.main.DOOrthoSize(5.4f, 1f);
+    }
+
+    void SetCPRCamera() {
+        Camera.main.transform.DOMove(new Vector3(0, -2.3f, -10), 0.5f);
+        Camera.main.DOOrthoSize(3f, 0.5f);
     }
 }

@@ -3,6 +3,7 @@ using UnityEngine;
 public class CPR_SecondLungResuscitationHand : MonoBehaviour, IUseable {
     [Header("References")]
     [SerializeField] Animator animatorController;
+    [SerializeField] Transform secondHandPoint;
 
     void Start() {
         animatorController = GetComponent<Animator>();
@@ -12,8 +13,8 @@ public class CPR_SecondLungResuscitationHand : MonoBehaviour, IUseable {
         Debug.Log("Check For Breathing Hand used!");
         //Play Animation
         animatorController.SetBool("isUsed", true);
-        GetComponent<DragableItem>().isPlayingAnimation = true;
-        transform.position = CPRStageStepManager.instance.noseHitbox.transform.position;
+        CPRStageStepManager.instance.OnUsedItem.Invoke();
+        transform.position = secondHandPoint.position;
     }
 
     public void AnimNotifyDestroyGameObject() {

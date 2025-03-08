@@ -1,6 +1,8 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler {
     [Header("References")]
@@ -12,7 +14,7 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
     public bool isDragging = false;
     public bool isPlayingAnimation = false;
     public Vector2 originPosition;
-    float lerpSpeed = 0.15f;
+    float lerpSpeed = 0.2f;
 
     [Header("Audio")]
     [SerializeField] AudioClip clickSound;
@@ -38,19 +40,55 @@ public class DragableItem : MonoBehaviour, IPointerDownHandler, IPointerUpHandle
         if (tooltipCanvas != null) {
             tooltipCanvas.gameObject.SetActive(false);
         }
+        Scene currentScene = SceneManager.GetActiveScene();
+        switch (currentScene.name) {
+            case "ScratchStageScene":
+                ScratchStageStepManager.instance.OnUsedItem.AddListener(() => {
+                    isPlayingAnimation = true;
+                    canDrag = false;
+                });
+
+                ScratchStageStepManager.instance.OnFinishedUsedItem.AddListener(() => {
+                    isPlayingAnimation = false;
+                    canDrag = true;
+                });
+                break;
+            case "BurnStage":
+                BurnStageStepManager.instance.OnUsedItem.AddListener(() => {
+                    isPlayingAnimation = true;
+                    canDrag = false;
+                });
+
+                BurnStageStepManager.instance.OnFinishedUsedItem.AddListener(() => {
+                    isPlayingAnimation = false;
+                    canDrag = true;
+                });
+                break;
+            case "CPRStage":
+                CPRStageStepManager.instance.OnUsedItem.AddListener(() => {
+                    isPlayingAnimation = true;
+                    canDrag = false;
+                });
+
+                CPRStageStepManager.instance.OnFinishedUsedItem.AddListener(() => {
+                    isPlayingAnimation = false;
+                    canDrag = true;
+                });
+                break;
+        }
     }
 
     void FixedUpdate() {
         if (isDragging && !isPlayingAnimation) {
             MoveObject();
         }
-        else if (!isPlayingAnimation){
+        else if (!isPlayingAnimation) {
             ResetPosition();
         }
     }
 
     void ResetPosition() {
-        transform.position = Vector2.Lerp(transform.position, originPosition, lerpSpeed);
+        transform.position = Vector2.Lerp(transform.position, originPosition, 0.15f);
         if (Vector2.Distance(transform.position, originPosition) < 0.1f) {
             GetComponent<Collider2D>().enabled = true;
         }

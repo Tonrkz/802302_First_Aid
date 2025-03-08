@@ -12,7 +12,7 @@ public class CPR_CheckForBreathingHand : MonoBehaviour, IUseable {
         Debug.Log("Check For Breathing Hand used!");
         //Play Animation
         animatorController.SetBool("isUsed", true);
-        GetComponent<DragableItem>().isPlayingAnimation = true;
+        CPRStageStepManager.instance.OnUsedItem.Invoke();
         gameObject.transform.position = GetComponent<DragableItem>().originPosition;
     }
 

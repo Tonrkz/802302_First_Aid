@@ -4,7 +4,7 @@ public class BGMManager : MonoBehaviour {
     public static BGMManager instance;
 
     [Header("References")]
-    [SerializeField] AudioSource BGMObject;
+    [SerializeField] public AudioSource BGMObject;
 
     [Header("Audio")]
     [SerializeField] internal AudioClip mainMenuBGM;
@@ -42,7 +42,7 @@ public class BGMManager : MonoBehaviour {
         sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
 
         switch (sceneName) {
-            case "MainMenu":
+            case "TitleScene":
                 PlayBGMClip(mainMenuBGM);
                 break;
             case "BurnStage":

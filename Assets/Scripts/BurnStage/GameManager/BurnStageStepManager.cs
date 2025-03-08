@@ -1,8 +1,13 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.Events;
 
 public class BurnStageStepManager : MonoBehaviour {
     public static BurnStageStepManager instance;
     internal Enum_BurnStageStep currentStep = Enum_BurnStageStep.StepOne;
+
+    public UnityEvent OnUsedItem;
+    public UnityEvent OnFinishedUsedItem;
 
     void Awake() {
         instance = this;

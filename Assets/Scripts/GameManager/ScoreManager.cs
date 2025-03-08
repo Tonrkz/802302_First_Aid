@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
     public static ScoreManager instance;
+
+    [Header("References")]
+    [SerializeField] GameObject wrongStepHUD;
 
     [Header("Attributes")]
     int scorePerStep = 5;
@@ -65,6 +69,7 @@ public class ScoreManager : MonoBehaviour {
     }
 
     public void GameOver() {
+        wrongStepHUD.SetActive(false);
         BGMManager.instance.PlayBGMClip(BGMManager.instance.stageFailedBGM);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIHeadUpDisplay);
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIGameOver);
@@ -77,5 +82,12 @@ public class ScoreManager : MonoBehaviour {
         UserInterfaceManager.instance.ToggleUI(UserInterfaceManager.instance.UIResult);
         UserInterfaceManager.instance.FadeinUI(UserInterfaceManager.instance.UIResultPanel);
         UserInterfaceManager.instance.UpdateText(UserInterfaceManager.instance.UIResultScoreText, $"{score}");
+    }
+
+    public IEnumerator ShowWrongStepHUD(string animation = "Anim_WrongStepHUD") {
+        wrongStepHUD.SetActive(true);
+        wrongStepHUD.GetComponent<Animator>().CrossFade(animation, 0f);
+        yield return new WaitForSeconds(wrongStepHUD.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+        wrongStepHUD.SetActive(false);
     }
 }
